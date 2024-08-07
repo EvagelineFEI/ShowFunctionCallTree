@@ -1,0 +1,281 @@
+{
+    "null": [
+        "draw_single",
+        "evolution",
+        "count_r",
+        "DoubleOptimizer",
+        "store_result",
+        "load_mat",
+        "load_mat_general",
+        "getcwd",
+        "print",
+        "SingleOptimizer",
+        "get_alpha",
+        "IntervalTypeFuzzy"
+    ],
+    "draw_single": [
+        "set_scientific",
+        "set_xlabel",
+        "range",
+        "grid",
+        "read",
+        "tight_layout",
+        "scatter",
+        "subplots",
+        "type",
+        "set_title",
+        "show",
+        "savefig",
+        "ScalarFormatter",
+        "set_major_formatter",
+        "tick_params",
+        "loads",
+        "open",
+        "print",
+        "len"
+    ],
+    "set_scientific": [],
+    "set_xlabel": [],
+    "range": [],
+    "grid": [],
+    "read": [],
+    "tight_layout": [],
+    "scatter": [],
+    "subplots": [],
+    "type": [],
+    "set_title": [],
+    "show": [],
+    "savefig": [],
+    "ScalarFormatter": [],
+    "set_major_formatter": [],
+    "tick_params": [],
+    "loads": [],
+    "open": [],
+    "print": [],
+    "len": [],
+    "evolution": [
+        "wake_s",
+        "append",
+        "range",
+        "sample",
+        "zip",
+        "pop_init",
+        "uniform",
+        "wakeup",
+        "final_count",
+        "selectBynasg2",
+        "copy",
+        "select_newpop",
+        "min",
+        "addto1",
+        "index",
+        "max",
+        "sum",
+        "random",
+        "print",
+        "remove",
+        "list",
+        "len"
+    ],
+    "wake_s": [
+        "remove",
+        "list",
+        "range",
+        "sample"
+    ],
+    "remove": [],
+    "list": [],
+    "sample": [],
+    "append": [],
+    "zip": [],
+    "pop_init": [
+        "addto1",
+        "append",
+        "range",
+        "uniform"
+    ],
+    "addto1": [
+        "sum",
+        "range",
+        "len"
+    ],
+    "sum": [],
+    "uniform": [],
+    "wakeup": [
+        "range",
+        "sample",
+        "remove",
+        "list",
+        "len"
+    ],
+    "final_count": [
+        "count_similar",
+        "count_alle",
+        "append",
+        "count_r",
+        "range",
+        "count_mcov",
+        "multi_add",
+        "count_var",
+        "count_vgij",
+        "zeros",
+        "count_vig",
+        "len"
+    ],
+    "count_similar": [
+        "sqrt"
+    ],
+    "sqrt": [],
+    "count_alle": [
+        "append",
+        "range",
+        "countP",
+        "count_vig",
+        "multiply"
+    ],
+    "countP": [
+        "array",
+        "sum",
+        "append",
+        "range"
+    ],
+    "array": [],
+    "count_vig": [
+        "abs",
+        "sum",
+        "array",
+        "range"
+    ],
+    "abs": [],
+    "multiply": [],
+    "count_r": [
+        "abs",
+        "final_count",
+        "count_fuzz",
+        "range",
+        "count_hes",
+        "print",
+        "array",
+        "multiply"
+    ],
+    "count_fuzz": [
+        "max",
+        "array",
+        "range",
+        "min"
+    ],
+    "max": [],
+    "min": [],
+    "count_hes": [
+        "max",
+        "array",
+        "range",
+        "min"
+    ],
+    "count_mcov": [],
+    "multi_add": [
+        "inside_proc",
+        "sum"
+    ],
+    "inside_proc": [
+        "abs"
+    ],
+    "count_var": [
+        "range"
+    ],
+    "count_vgij": [
+        "sum",
+        "append",
+        "range",
+        "array",
+        "count_var2t",
+        "zeros"
+    ],
+    "count_var2t": [
+        "range"
+    ],
+    "zeros": [],
+    "selectBynasg2": [
+        "append",
+        "range",
+        "index",
+        "array",
+        "dominate",
+        "len"
+    ],
+    "index": [],
+    "dominate": [
+        "final_count",
+        "copy"
+    ],
+    "copy": [],
+    "select_newpop": [
+        "final_count",
+        "count_congestion",
+        "append",
+        "range",
+        "len",
+        "copy"
+    ],
+    "count_congestion": [
+        "final_count",
+        "sorted",
+        "append",
+        "range",
+        "zip",
+        "list",
+        "len",
+        "zeros",
+        "copy"
+    ],
+    "sorted": [],
+    "random": [],
+    "DoubleOptimizer": [],
+    "store_result": [
+        "dump",
+        "open"
+    ],
+    "dump": [],
+    "load_mat": [
+        "append",
+        "range",
+        "open",
+        "strip",
+        "readlines",
+        "map",
+        "array",
+        "split",
+        "list",
+        "len"
+    ],
+    "strip": [],
+    "readlines": [],
+    "map": [],
+    "split": [],
+    "load_mat_general": [
+        "append",
+        "getcwd",
+        "range",
+        "open",
+        "strip",
+        "readlines",
+        "map",
+        "array",
+        "split",
+        "list",
+        "len"
+    ],
+    "getcwd": [],
+    "SingleOptimizer": [],
+    "get_alpha": [
+        "append",
+        "open",
+        "strip",
+        "readlines",
+        "array",
+        "float",
+        "split"
+    ],
+    "float": [],
+    "IntervalTypeFuzzy": []
+}

@@ -1,0 +1,182 @@
+{
+    "evolution": [
+        "min",
+        "list",
+        "random",
+        "append",
+        "wake_s",
+        "pop_init",
+        "final_count",
+        "sum",
+        "remove",
+        "selectBynasg2",
+        "max",
+        "zip",
+        "uniform",
+        "copy",
+        "index",
+        "select_newpop",
+        "range",
+        "print",
+        "sample",
+        "addto1",
+        "wakeup",
+        "len"
+    ],
+    "min": [],
+    "list": [],
+    "random": [],
+    "append": [],
+    "wake_s": [
+        "range",
+        "list",
+        "remove",
+        "sample"
+    ],
+    "range": [],
+    "remove": [],
+    "sample": [],
+    "pop_init": [
+        "range",
+        "uniform",
+        "addto1",
+        "append"
+    ],
+    "uniform": [],
+    "addto1": [
+        "range",
+        "sum",
+        "len"
+    ],
+    "sum": [],
+    "len": [],
+    "final_count": [
+        "count_vgij",
+        "append",
+        "multi_add",
+        "zeros",
+        "range",
+        "count_vig",
+        "count_alle",
+        "count_similar",
+        "count_mcov",
+        "count_var",
+        "count_r",
+        "len"
+    ],
+    "count_vgij": [
+        "array",
+        "append",
+        "zeros",
+        "range",
+        "count_var2t",
+        "sum"
+    ],
+    "array": [],
+    "zeros": [],
+    "count_var2t": [
+        "range"
+    ],
+    "multi_add": [
+        "sum",
+        "inside_proc"
+    ],
+    "inside_proc": [
+        "abs"
+    ],
+    "abs": [],
+    "count_vig": [
+        "array",
+        "range",
+        "sum",
+        "abs"
+    ],
+    "count_alle": [
+        "append",
+        "count_vig",
+        "range",
+        "multiply",
+        "countP"
+    ],
+    "multiply": [],
+    "countP": [
+        "array",
+        "range",
+        "sum",
+        "append"
+    ],
+    "count_similar": [
+        "sqrt"
+    ],
+    "sqrt": [],
+    "count_mcov": [],
+    "count_var": [
+        "range"
+    ],
+    "count_r": [
+        "array",
+        "count_hes",
+        "count_fuzz",
+        "range",
+        "multiply",
+        "final_count",
+        "abs",
+        "print"
+    ],
+    "count_hes": [
+        "range",
+        "min",
+        "array",
+        "max"
+    ],
+    "max": [],
+    "count_fuzz": [
+        "range",
+        "min",
+        "array",
+        "max"
+    ],
+    "print": [],
+    "selectBynasg2": [
+        "array",
+        "append",
+        "range",
+        "dominate",
+        "index",
+        "len"
+    ],
+    "dominate": [
+        "copy",
+        "final_count"
+    ],
+    "copy": [],
+    "index": [],
+    "zip": [],
+    "select_newpop": [
+        "append",
+        "count_congestion",
+        "range",
+        "final_count",
+        "copy",
+        "len"
+    ],
+    "count_congestion": [
+        "append",
+        "zeros",
+        "range",
+        "final_count",
+        "copy",
+        "zip",
+        "list",
+        "sorted",
+        "len"
+    ],
+    "sorted": [],
+    "wakeup": [
+        "range",
+        "remove",
+        "sample",
+        "list",
+        "len"
+    ]
+}

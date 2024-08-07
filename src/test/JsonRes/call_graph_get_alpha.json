@@ -1,0 +1,18 @@
+{
+    "get_alpha": [
+        "array",
+        "append",
+        "readlines",
+        "float",
+        "open",
+        "strip",
+        "split"
+    ],
+    "array": [],
+    "append": [],
+    "readlines": [],
+    "float": [],
+    "open": [],
+    "strip": [],
+    "split": []
+}

@@ -1,0 +1,24 @@
+{
+    "load_mat": [
+        "len",
+        "array",
+        "append",
+        "readlines",
+        "map",
+        "range",
+        "open",
+        "strip",
+        "list",
+        "split"
+    ],
+    "len": [],
+    "array": [],
+    "append": [],
+    "readlines": [],
+    "map": [],
+    "range": [],
+    "open": [],
+    "strip": [],
+    "list": [],
+    "split": []
+}
