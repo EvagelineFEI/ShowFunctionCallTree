@@ -1,0 +1,2547 @@
+{
+    "method_calls": {
+        "AckRequest.sendAckData": [
+            "sendAckData"
+        ],
+        "AckRequest.sendAckData.sendAckData": [
+            "isAckRequested",
+            "client.getEngineIOVersion",
+            "ackPacket.setData",
+            "client.send",
+            "sended.compareAndSet",
+            "ackPacket.setAckId",
+            "ackPacket.setSubType",
+            "originalPacket.getAckId"
+        ],
+        "BroadcastAckCallback.onSuccess": [
+            "counter.getAndDecrement",
+            "onClientSuccess",
+            "executeSuccess"
+        ],
+        "BroadcastAckCallback.onSuccess.onTimeout": [
+            "onClientTimeout"
+        ],
+        "BroadcastAckCallback.onSuccess.onTimeout.onClientTimeout.onClientSuccess.onAllSuccess.executeSuccess": [
+            "loopFinished.get",
+            "counter.get",
+            "successExecuted.compareAndSet",
+            "onAllSuccess"
+        ],
+        "BroadcastAckCallback.onSuccess.onTimeout.onClientTimeout.onClientSuccess.onAllSuccess.executeSuccess.loopFinished": [
+            "executeSuccess",
+            "loopFinished.set"
+        ],
+        "Configuration.setJsonSupport.setHostname.setPort.setBossThreads.setWorkerThreads.setPingInterval.setPingTimeout.setContext.setAllowCustomRequests.setKeyStorePassword.setKeyStore.setKeyStoreFormat.setMaxHttpContentLength.setTransports": [],
+        "JsonSupportWrapper.writeValue": [
+            "log.error",
+            "delegate.writeValue"
+        ],
+        "JsonSupportWrapper.writeValue.addEventMapping": [
+            "delegate.addEventMapping"
+        ],
+        "JsonSupportWrapper.writeValue.addEventMapping.removeEventMapping": [
+            "delegate.removeEventMapping",
+            "delegate.getArrays"
+        ],
+        "MultiRoomBroadcastOperations.send": [
+            "size",
+            "b.send"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent": [
+            "excludedClient.getSessionId",
+            "sendEvent",
+            "socketIOClient.getSessionId"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent": [
+            "size",
+            "b.sendEvent"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent": [
+            "size",
+            "b.sendEvent"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent.sendEvent": [
+            "excludedClient.getSessionId",
+            "sendEvent",
+            "socketIOClient.getSessionId"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent": [
+            "size",
+            "b.sendEvent"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent.send": [
+            "size",
+            "b.send"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent.send.disconnect": [
+            "size",
+            "b.disconnect"
+        ],
+        "MultiRoomBroadcastOperations.send.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent.send.disconnect.sendEvent": [
+            "size",
+            "b.sendEvent"
+        ],
+        "SingleRoomBroadcastOperations.dispatch": [
+            "pubSubStore",
+            "publish"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send": [
+            "client.getEngineIOVersion",
+            "packet.setEngineIOVersion",
+            "client.send",
+            "dispatch"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send": [
+            "ackCallback.createClientCallback",
+            "client.send",
+            "ackCallback.loopFinished"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect": [
+            "client.disconnect"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent": [
+            "excludedClient.getSessionId",
+            "sendEvent",
+            "socketIOClient.getSessionId"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent.sendEvent": [
+            "client.getEngineIOVersion",
+            "packet.setData",
+            "dispatch",
+            "excludePredicate.test",
+            "client.send",
+            "packet.setEngineIOVersion",
+            "packet.setSubType",
+            "packet.setName"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent.sendEvent.sendEvent": [
+            "send",
+            "packet.setData",
+            "packet.setSubType",
+            "packet.setName"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent.sendEvent.sendEvent.sendEvent": [
+            "ackCallback.createClientCallback",
+            "client.sendEvent",
+            "ackCallback.loopFinished"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent": [
+            "excludedClient.getSessionId",
+            "sendEvent",
+            "socketIOClient.getSessionId"
+        ],
+        "SingleRoomBroadcastOperations.dispatch.send.send.disconnect.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent.sendEvent": [
+            "excludePredicate.test",
+            "client.sendEvent",
+            "ackCallback.loopFinished",
+            "ackCallback.createClientCallback"
+        ],
+        "SocketIOChannelInitializer.handlerAdded": [
+            "scheduler.update"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start": [
+            "createSSLContext",
+            "configuration.getKeyStore",
+            "factory.init",
+            "configuration.getJsonSupport",
+            "configuration.getExceptionListener",
+            "configuration.getStoreFactory",
+            "configuration.getContext"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start.initChannel": [
+            "addSslHandler",
+            "ch.pipeline",
+            "addSocketioHandlers"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start.initChannel.addSslHandler": [
+            "sslContext.createSSLEngine",
+            "configuration.getTrustStore",
+            "pipeline.addLast",
+            "engine.setUseClientMode",
+            "engine.setNeedClientAuth",
+            "configuration.isNeedClientAuth"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start.initChannel.addSslHandler.addSocketioHandlers": [
+            "serverContext.init",
+            "tmf.getTrustManagers",
+            "configuration.getMaxHttpContentLength",
+            "tmf.init",
+            "kmf.getKeyManagers",
+            "TrustManagerFactory.getInstance",
+            "toCharArray",
+            "configuration.getSSLProtocol",
+            "ks.load",
+            "configuration.getTrustStorePassword",
+            "configuration.getKeyStoreFormat",
+            "KeyManagerFactory.getInstance",
+            "configuration.getTrustStore",
+            "configuration.getKeyStorePassword",
+            "configuration.getKeyStore",
+            "pipeline.addLast",
+            "SSLContext.getInstance",
+            "ts.load",
+            "KeyStore.getInstance",
+            "configuration.isWebsocketCompression",
+            "configuration.getKeyManagerFactoryAlgorithm",
+            "TrustManagerFactory.getDefaultAlgorithm",
+            "configuration.getTrustStoreFormat",
+            "configuration.isHttpCompression",
+            "kmf.init"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start.initChannel.addSslHandler.addSocketioHandlers.onDisconnect": [
+            "onDisconnect",
+            "publish",
+            "log.debug",
+            "client.getSessionId",
+            "ackManager.onDisconnect",
+            "configuration.getStoreFactory",
+            "pubSubStore",
+            "authorizeHandler.onDisconnect"
+        ],
+        "SocketIOChannelInitializer.handlerAdded.start.initChannel.addSslHandler.addSocketioHandlers.onDisconnect.stop": [
+            "configuration.getStoreFactory",
+            "factory.shutdown",
+            "scheduler.shutdown"
+        ],
+        "SocketIOServer.setPipelineFactory": [
+            "n.getBroadcastOperations",
+            "namespacesHub.get",
+            "namespacesHub.getAllNamespaces",
+            "getAllClients",
+            "n.getRoomOperations",
+            "list.add",
+            "namespaces.size",
+            "getClient"
+        ],
+        "SocketIOServer.setPipelineFactory.start": [
+            "channel",
+            "initGroups",
+            "addListener",
+            "applyConnectionOptions",
+            "log.info",
+            "pipelineFactory.start",
+            "startAsync",
+            "configCopy.isUseLinuxNativeEpoll",
+            "syncUninterruptibly",
+            "childHandler",
+            "configCopy.getStoreFactory",
+            "configCopy.getPort",
+            "b.bind",
+            "b.group",
+            "configCopy.getHostname"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete": [
+            "configCopy.getPort",
+            "log.error",
+            "future.isSuccess",
+            "log.info"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions": [
+            "config.getWriteBufferWaterMarkHigh",
+            "configCopy.getSocketConfig",
+            "bootstrap.childOption",
+            "config.isTcpKeepAlive",
+            "config.getSoLinger",
+            "config.isReuseAddress",
+            "bootstrap.option",
+            "config.getAcceptBackLog",
+            "config.getTcpReceiveBufferSize",
+            "config.isTcpNoDelay",
+            "config.getWriteBufferWaterMarkLow",
+            "config.getTcpSendBufferSize"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups": [
+            "configCopy.isUseLinuxNativeEpoll",
+            "configCopy.getBossThreads",
+            "configCopy.getWorkerThreads"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop": [
+            "namespacesHub.create",
+            "syncUninterruptibly",
+            "namespacesHub.get",
+            "workerGroup.shutdownGracefully",
+            "pipelineFactory.stop",
+            "bossGroup.shutdownGracefully",
+            "log.info"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace": [
+            "namespacesHub.remove"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener": [
+            "mainNamespace.addMultiTypeEventListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener": [
+            "mainNamespace.addEventListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor": [
+            "mainNamespace.addEventInterceptor"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners": [
+            "mainNamespace.removeAllListeners"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener": [
+            "mainNamespace.addDisconnectListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener": [
+            "mainNamespace.addConnectListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener.addPingListener": [
+            "mainNamespace.addPingListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener.addPingListener.addPongListener": [
+            "mainNamespace.addPongListener"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener.addPingListener.addPongListener.addListeners": [
+            "mainNamespace.addListeners"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener.addPingListener.addPongListener.addListeners.addListeners": [
+            "mainNamespace.addListeners"
+        ],
+        "SocketIOServer.setPipelineFactory.start.operationComplete.applyConnectionOptions.initGroups.stop.removeNamespace.addMultiTypeEventListener.addEventListener.addEventInterceptor.removeAllListeners.addDisconnectListener.addConnectListener.addPingListener.addPongListener.addListeners.addListeners.addListeners": [
+            "mainNamespace.addListeners"
+        ],
+        "VoidAckCallback.onSuccess": [
+            "onSuccess"
+        ],
+        "AckManager.AckEntry.initAckIndex": [
+            "LoggerFactory.getLogger",
+            "PlatformDependent.newConcurrentHashMap",
+            "ackIndex.compareAndSet"
+        ],
+        "AckManager.AckEntry.initAckIndex.initAckIndex": [
+            "ackEntry.initAckIndex",
+            "ackEntries.get",
+            "ackEntries.putIfAbsent",
+            "getAckEntry"
+        ],
+        "AckManager.AckEntry.initAckIndex.initAckIndex.onAck": [
+            "ackEntry.initAckIndex",
+            "log.isDebugEnabled",
+            "args.size",
+            "getAckEntry",
+            "log.debug",
+            "ackEntry.addAckCallback",
+            "client.getSessionId",
+            "log.error",
+            "removeCallback",
+            "args.get",
+            "scheduler.cancel",
+            "packet.getAckId",
+            "ackEntry.removeCallback",
+            "args.isEmpty",
+            "packet.getData",
+            "scheduleTimeout",
+            "ackEntry.getAckCallback",
+            "callback.onSuccess",
+            "packet",
+            "ackEntries.get"
+        ],
+        "AckManager.AckEntry.initAckIndex.initAckIndex.onAck.scheduleTimeout": [
+            "callback.getTimeout",
+            "scheduler.scheduleCallback"
+        ],
+        "AckManager.AckEntry.initAckIndex.initAckIndex.onAck.scheduleTimeout.run": [
+            "callback.getTimeout",
+            "removeCallback",
+            "cb.onTimeout"
+        ],
+        "AckManager.AckEntry.initAckIndex.initAckIndex.onAck.scheduleTimeout.run.onDisconnect": [
+            "e.getAckIndexes",
+            "e.getAckCallback",
+            "ackEntries.remove",
+            "callback.onTimeout",
+            "client.getSessionId",
+            "scheduler.cancel"
+        ],
+        "OnConnectScanner.addListener": [
+            "namespace.addConnectListener"
+        ],
+        "OnConnectScanner.addListener.onConnect": [
+            "method.invoke",
+            "e.getCause"
+        ],
+        "OnConnectScanner.addListener.onConnect.validate": [
+            "method.getParameterTypes",
+            "method.getName",
+            "equals"
+        ],
+        "OnDisconnectScanner.addListener": [
+            "namespace.addDisconnectListener"
+        ],
+        "OnDisconnectScanner.addListener.onDisconnect": [
+            "method.invoke",
+            "e.getCause"
+        ],
+        "OnDisconnectScanner.addListener.onDisconnect.validate": [
+            "method.getParameterTypes",
+            "method.getName",
+            "equals"
+        ],
+        "OnEventScanner.addListener": [
+            "length",
+            "dataIndexes",
+            "annotation.value",
+            "dataIndexes.size",
+            "method.getParameterTypes",
+            "paramIndex",
+            "trim",
+            "namespace.addMultiTypeEventListener",
+            "classes.add"
+        ],
+        "OnEventScanner.addListener.onData": [
+            "next",
+            "dataIndexes.isEmpty",
+            "namespace.addEventListener",
+            "annotation.value",
+            "method.getParameterTypes",
+            "data.get",
+            "classes.toArray",
+            "e.getCause",
+            "method.invoke",
+            "dataIndexes.iterator"
+        ],
+        "OnEventScanner.addListener.onData.onData": [
+            "next",
+            "dataIndexes.isEmpty",
+            "result.add",
+            "method.getParameterTypes",
+            "e.getCause",
+            "type.equals",
+            "method.invoke",
+            "dataIndexes.iterator"
+        ],
+        "OnEventScanner.addListener.onData.onData.validate": [
+            "dataIndexes",
+            "dataIndexes.size",
+            "method.getParameterTypes",
+            "paramIndex",
+            "method.getName"
+        ],
+        "ScannerEngine.scan": [
+            "clazz.isInterface",
+            "annotationScanner.addListener",
+            "annotationScanner.getScanAnnotation",
+            "method.getAnnotation",
+            "method2.getReturnType",
+            "method1.getParameterTypes",
+            "method1.getReturnType",
+            "method1.getName",
+            "makeAccessible",
+            "method2.getName",
+            "method2.getParameterTypes",
+            "object.getClass",
+            "clazz.getDeclaredMethods",
+            "clazz.getInterfaces",
+            "annotationScanner.validate",
+            "clazz.getSuperclass",
+            "method.getName",
+            "findSimilarMethod",
+            "clazz.isAssignableFrom",
+            "equals",
+            "scan",
+            "log.warn"
+        ],
+        "ScannerEngine.scan.makeAccessible": [
+            "method.getModifiers",
+            "Modifier.isPublic",
+            "getModifiers",
+            "method.setAccessible",
+            "method.isAccessible",
+            "method.getDeclaringClass"
+        ],
+        "SpringAnnotationScanner.doWith": [
+            "method.isAnnotationPresent",
+            "add.set",
+            "add.get",
+            "bean.getClass"
+        ],
+        "AuthorizeHandler.channelActive": [
+            "ctx.channel",
+            "scheduler.schedule"
+        ],
+        "AuthorizeHandler.channelActive.run": [
+            "close",
+            "ctx.channel",
+            "configuration.getFirstDataTimeout",
+            "log.debug",
+            "remoteAddress"
+        ],
+        "AuthorizeHandler.channelActive.run.channelRead": [
+            "configuration.getTransports",
+            "req.uri",
+            "addListener",
+            "log.debug",
+            "client.getEngineIOVersion",
+            "req.release",
+            "params.get",
+            "names",
+            "log.error",
+            "client.send",
+            "ctx.fireChannelRead",
+            "getAuthorizationResult",
+            "configuration.getPingTimeout",
+            "req.headers",
+            "set",
+            "transportValue.get",
+            "channel.localAddress",
+            "channel.writeAndFlush",
+            "channel.attr",
+            "client.schedulePing",
+            "UUID.randomUUID",
+            "queryDecoder.path",
+            "storeParams.forEach",
+            "toUpperCase",
+            "packet.setData",
+            "equals",
+            "authResult.getStoreParams",
+            "Transport.valueOf",
+            "get",
+            "ctx.channel",
+            "configuration.isRandomSession",
+            "authorize",
+            "writeAndFlushTransportError",
+            "contains",
+            "configuration.getPingInterval",
+            "Transport.WEBSOCKET.equals",
+            "authResult.isAuthorized",
+            "headers.put",
+            "client.schedulePingTimeout",
+            "queryDecoder.parameters",
+            "EngineIOVersion.V4.equals",
+            "scheduler.cancel",
+            "startsWith",
+            "clientsBox.addClient",
+            "configuration.isAllowCustomRequests",
+            "configuration.getAuthorizationListener",
+            "size",
+            "channel.remoteAddress",
+            "generateOrGetSessionIdFromRequest",
+            "origin.equalsIgnoreCase",
+            "client.getCurrentTransport",
+            "client.getStore",
+            "getAll"
+        ],
+        "AuthorizeHandler.channelActive.run.channelRead.writeAndFlushTransportError": [
+            "channel.writeAndFlush",
+            "values.get",
+            "cookie.name",
+            "UUID.randomUUID",
+            "values.size",
+            "UUID.fromString",
+            "headers.getAll",
+            "equals",
+            "log.warn",
+            "ServerCookieDecoder.LAX.decode",
+            "set",
+            "errorData.put",
+            "cookie.value",
+            "channel.attr"
+        ],
+        "AuthorizeHandler.channelActive.run.channelRead.writeAndFlushTransportError.connect": [
+            "scheduler.cancel"
+        ],
+        "AuthorizeHandler.channelActive.run.channelRead.writeAndFlushTransportError.connect.connect": [
+            "namespacesHub.get",
+            "publish",
+            "contains",
+            "client.getSessionId",
+            "client.getEngineIOVersion",
+            "client.getNamespaces",
+            "configuration.getStoreFactory",
+            "ns.onConnect",
+            "pubSubStore",
+            "client.addNamespaceClient",
+            "client.send",
+            "EngineIOVersion.V4.equals",
+            "packet.setSubType"
+        ],
+        "AuthorizeHandler.channelActive.run.channelRead.writeAndFlushTransportError.connect.connect.onDisconnect": [
+            "clientsBox.removeClient",
+            "client.getSessionId"
+        ],
+        "ClientHead.bindChannel": [
+            "log.debug",
+            "channels.get",
+            "clientsBox.remove",
+            "clientsBox.add",
+            "state.update",
+            "sendPackets"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel": [
+            "channel.equals",
+            "handshakeData.getHttpHeaders",
+            "get",
+            "getCurrentTransport",
+            "send",
+            "channels.get",
+            "state.update",
+            "clientsBox.remove",
+            "state.getChannel"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing": [
+            "scheduler.cancel"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout": [
+            "scheduler.cancel"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing": [
+            "cancelPing",
+            "scheduler.schedule"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run": [
+            "client.getEngineIOVersion",
+            "client.send",
+            "clientsBox.get",
+            "schedulePing",
+            "EngineIOVersion.V4.equals",
+            "configuration.getPingInterval"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout": [
+            "scheduler.schedule",
+            "cancelPingTimeout"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run": [
+            "get",
+            "channel.writeAndFlush",
+            "add",
+            "clientsBox.get",
+            "log.debug",
+            "configuration.getPingInterval",
+            "channels.get",
+            "sendPackets",
+            "client.disconnect",
+            "configuration.getPingTimeout",
+            "channel.attr",
+            "state.getPacketsQueue",
+            "state.getChannel"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run.removeNamespaceClient": [
+            "namespaceClients.get",
+            "namespaceClients.remove",
+            "namespaceClients.put",
+            "namespaceClients.keySet",
+            "namespaceClients.isEmpty",
+            "disconnected.get",
+            "client.getNamespace",
+            "disconnectableHub.onDisconnect"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run.removeNamespaceClient.onChannelDisconnect": [
+            "namespaceClients.values",
+            "disconnected.set",
+            "channels.values",
+            "cancelPing",
+            "client.onDisconnect",
+            "clientsBox.remove",
+            "handshakeData.getAddress",
+            "state.getChannel",
+            "cancelPingTimeout"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run.removeNamespaceClient.onChannelDisconnect.disconnect": [
+            "send",
+            "channels.get",
+            "isActive",
+            "channels.values",
+            "equals",
+            "onChannelDisconnect",
+            "future.addListener",
+            "packet.setSubType",
+            "state.getChannel"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run.removeNamespaceClient.onChannelDisconnect.disconnect.upgradeCurrentTransport": [
+            "log.debug",
+            "channels.get",
+            "entry.getValue",
+            "sendPackets",
+            "channels.entrySet",
+            "equals",
+            "entry.getKey",
+            "state.setPacketsQueue",
+            "state.getChannel",
+            "getPacketsQueue"
+        ],
+        "ClientHead.bindChannel.releasePollingChannel.cancelPing.cancelPingTimeout.schedulePing.run.schedulePingTimeout.run.removeNamespaceClient.onChannelDisconnect.disconnect.upgradeCurrentTransport.setLastBinaryPacket": [
+            "channel.isWritable",
+            "channels.get",
+            "getCurrentTransport",
+            "state.getChannel"
+        ],
+        "ClientsBox.addClient": [
+            "uuid2clients.remove",
+            "clientHead.getSessionId",
+            "uuid2clients.get",
+            "uuid2clients.put"
+        ],
+        "ClientsBox.addClient.add": [
+            "channel2clients.put"
+        ],
+        "ClientsBox.addClient.add.remove": [
+            "channel2clients.get",
+            "channel2clients.remove"
+        ],
+        "EncoderHandler.readVersion": [
+            "getResources",
+            "name.equals",
+            "getClass",
+            "getClassLoader",
+            "resources.nextElement",
+            "resources.hasMoreElements",
+            "manifest.getMainAttributes",
+            "attrs.getValue",
+            "openStream"
+        ],
+        "EncoderHandler.readVersion.write": [
+            "get",
+            "ctx.channel",
+            "add",
+            "encoder.allocateBuffer",
+            "sendMessage",
+            "addOriginHeaders",
+            "msg.getSessionId",
+            "attr",
+            "res.headers",
+            "ctx.alloc"
+        ],
+        "EncoderHandler.readVersion.write.write": [
+            "ctx.channel",
+            "sendMessage",
+            "encoder.allocateBuffer",
+            "out.writeBytes",
+            "ctx.alloc"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage": [
+            "get",
+            "add",
+            "sendMessage",
+            "out.readableBytes",
+            "addOriginHeaders",
+            "HttpUtil.setContentLength",
+            "msg.getSessionId",
+            "res.headers",
+            "userAgent.contains",
+            "channel.attr"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage": [
+            "channel.writeAndFlush",
+            "addListener",
+            "log.isTraceEnabled",
+            "out.isReadable",
+            "out.toString",
+            "msg.getSessionId",
+            "out.release",
+            "channel.write",
+            "log.trace"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage.sendError": [
+            "ctx.channel",
+            "sendMessage",
+            "encoder.allocateBuffer",
+            "writeValue",
+            "encoder.getJsonSupport",
+            "errorMsg.getData",
+            "ctx.alloc"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders": [
+            "configuration.getOrigin",
+            "configuration.getAllowHeaders",
+            "add",
+            "res.headers"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write": [
+            "handleHTTP",
+            "sendError",
+            "write",
+            "handleWebsocket",
+            "m.getTransport"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket": [
+            "queue.poll",
+            "ctx.channel",
+            "writeFutureList.add",
+            "out.readSlice",
+            "writeFutureList.setChannelPromise",
+            "out.readableBytes",
+            "outBuf.writeByte",
+            "encoder.encodePacket",
+            "out.toString",
+            "msg.getSessionId",
+            "dst.retain",
+            "msg.getTransport",
+            "outBuf.writeBytes",
+            "log.trace",
+            "ctx.alloc",
+            "dstStart.retain",
+            "writeAndFlush",
+            "configuration.getMaxFramePayloadLength",
+            "encoder.allocateBuffer",
+            "log.isTraceEnabled",
+            "out.isReadable",
+            "packet.getAttachments",
+            "msg.getClientHead",
+            "write",
+            "out.release",
+            "getPacketsQueue",
+            "flush",
+            "ByteBufUtil.hexDump"
+        ],
+        "EncoderHandler.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP": [
+            "get",
+            "ctx.channel",
+            "queue.isEmpty",
+            "sendMessage",
+            "promise.trySuccess",
+            "attr",
+            "msg.getTransport",
+            "ctx.alloc",
+            "channel.attr",
+            "encoder.allocateBuffer",
+            "channel.isActive",
+            "encoder.encodePackets",
+            "msg.getClientHead",
+            "attr.compareAndSet",
+            "encoder.encodeJsonP",
+            "getPacketsQueue"
+        ],
+        "EncoderHandler.ChannelFutureList.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP.cleanup": [
+            "f.removeListener"
+        ],
+        "EncoderHandler.ChannelFutureList.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP.cleanup.validate": [
+            "f.isDone",
+            "f.cause",
+            "cleanup",
+            "f.isSuccess",
+            "promise.tryFailure",
+            "promise.trySuccess"
+        ],
+        "EncoderHandler.ChannelFutureList.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP.cleanup.validate.add": [
+            "futureList.add",
+            "f.addListener"
+        ],
+        "EncoderHandler.ChannelFutureList.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP.cleanup.validate.add.setChannelPromise": [
+            "validate"
+        ],
+        "EncoderHandler.ChannelFutureList.readVersion.write.write.sendMessage.sendMessage.sendError.addOriginHeaders.write.handleWebsocket.handleHTTP.cleanup.validate.add.setChannelPromise.operationComplete": [
+            "validate"
+        ],
+        "InPacketHandler.channelRead0": [
+            "log.debug",
+            "client.getEngineIOVersion",
+            "client.addNamespaceClient",
+            "log.error",
+            "client.send",
+            "p.setSubType",
+            "message.getClient",
+            "packet.getNsp",
+            "content.toString",
+            "namespacesHub.get",
+            "client.getHandshakeData",
+            "client.getSessionId",
+            "packetListener.onPacket",
+            "message.getContent",
+            "packet.hasAttachments",
+            "packet.getSubType",
+            "decoder.decodePackets",
+            "p.setNsp",
+            "EngineIOVersion.V4.equals",
+            "packet.isAttachmentsLoaded",
+            "log.trace",
+            "content.isReadable",
+            "ns.getName",
+            "client.getChildClient",
+            "message.getTransport",
+            "log.isTraceEnabled",
+            "packet.getData",
+            "ns.onAuthData",
+            "allowAuth.getErrorData",
+            "setAuthToken",
+            "p.setData",
+            "allowAuth.isSuccess"
+        ],
+        "InPacketHandler.channelRead0.exceptionCaught": [
+            "exceptionListener.exceptionCaught"
+        ],
+        "PacketListener.onPacket": [
+            "client.getBaseClient",
+            "namespacesHub.get",
+            "send",
+            "upgradeCurrentTransport",
+            "client.getSessionId",
+            "client.getEngineIOVersion",
+            "client.onDisconnect",
+            "packet.getType",
+            "packet.getSubType",
+            "onChannelDisconnect",
+            "namespace.onPong",
+            "schedulePingTimeout",
+            "EngineIOVersion.V4.equals",
+            "scheduler.cancel",
+            "ackManager.onAck",
+            "packet.getAckId",
+            "packet.getData",
+            "namespace.onConnect",
+            "packet.getNsp",
+            "outPacket.setData",
+            "packet.isAckRequested",
+            "equals",
+            "ackManager.initAckIndex",
+            "packet.getName",
+            "namespace.onPing",
+            "namespace.onEvent"
+        ],
+        "WrongUrlHandler.channelRead": [
+            "channel.writeAndFlush",
+            "ctx.channel",
+            "channel.remoteAddress",
+            "req.uri",
+            "queryDecoder.path",
+            "req.release",
+            "f.addListener",
+            "log.warn",
+            "queryDecoder.parameters"
+        ],
+        "DefaultExceptionListener.onEventException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "DefaultExceptionListener.onEventException.onDisconnectException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "DefaultExceptionListener.onEventException.onDisconnectException.onConnectException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "DefaultExceptionListener.onEventException.onDisconnectException.onConnectException.onPingException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "DefaultExceptionListener.onEventException.onDisconnectException.onConnectException.onPingException.onPongException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "DefaultExceptionListener.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException": [
+            "log.error",
+            "e.getMessage"
+        ],
+        "CompositeIterator.remove": [
+            "currentIterator.remove"
+        ],
+        "EventEntry.addListener": [
+            "listeners.add"
+        ],
+        "Namespace.addClient": [
+            "client.getSessionId",
+            "allClients.put"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener": [
+            "eventListeners.get",
+            "eventListeners.putIfAbsent",
+            "jsonSupport.addEventMapping",
+            "entry.addListener"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners": [
+            "eventListeners.remove",
+            "jsonSupport.removeEventMapping"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener": [
+            "eventListeners.get",
+            "eventListeners.putIfAbsent",
+            "jsonSupport.addEventMapping",
+            "entry.addListener"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor": [
+            "eventInterceptors.add"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent": [
+            "exceptionListener.onEventException",
+            "entry.getListeners",
+            "eventListeners.get",
+            "eventInterceptor.onEvent",
+            "dataListener.onData",
+            "sendAck",
+            "getEventData"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck": [
+            "args.isEmpty",
+            "args.get",
+            "ackRequest.sendAckData"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener": [
+            "disconnectListeners.add"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect": [
+            "leave",
+            "client.getAllRooms",
+            "storeFactory.pubSubStore",
+            "allClients.remove",
+            "publish",
+            "client.getSessionId",
+            "getName",
+            "clientRooms.remove",
+            "exceptionListener.onDisconnectException",
+            "listener.onDisconnect"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener": [
+            "connectListeners.add"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect": [
+            "exceptionListener.onConnectException",
+            "join",
+            "storeFactory.pubSubStore",
+            "publish",
+            "client.getSessionId",
+            "getName",
+            "listener.onConnect"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener": [
+            "pingListeners.add"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener": [
+            "pongListeners.add"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing": [
+            "exceptionListener.onPingException",
+            "listener.onPing"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong": [
+            "name.equals",
+            "getName",
+            "allClients.values",
+            "getClass",
+            "list.add",
+            "name.hashCode",
+            "obj.getClass",
+            "exceptionListener.onPingException",
+            "listener.onPong",
+            "getRoomClients"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners": [
+            "addListeners",
+            "listeners.getClass"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners": [
+            "addListeners",
+            "next.getClass"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners": [
+            "addListeners",
+            "engine.scan"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom": [
+            "join",
+            "getName",
+            "storeFactory.pubSubStore",
+            "publish"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms": [
+            "join",
+            "getName",
+            "storeFactory.pubSubStore",
+            "publish"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch": [
+            "socketIOClient.send",
+            "getRoomClients"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join": [
+            "join",
+            "map.putIfAbsent",
+            "map.get",
+            "clients.add",
+            "PlatformDependent"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join": [
+            "join"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join.leaveRoom": [
+            "leave",
+            "getName",
+            "storeFactory.pubSubStore",
+            "publish"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join.leaveRoom.leaveRooms": [
+            "leave",
+            "getName",
+            "storeFactory.pubSubStore",
+            "publish"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join.leaveRoom.leaveRooms.leave": [
+            "map.remove",
+            "clients.isEmpty",
+            "clients.remove",
+            "map.get"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join.leaveRoom.leaveRooms.leave.leave": [
+            "leave",
+            "roomClients.get",
+            "result.add",
+            "allClients.get",
+            "client.getSessionId",
+            "allClients.values",
+            "roomClients.keySet",
+            "sessionIds.size",
+            "clientRooms.get"
+        ],
+        "Namespace.addClient.addMultiTypeEventListener.removeAllListeners.addEventListener.addEventInterceptor.onEvent.sendAck.addDisconnectListener.onDisconnect.addConnectListener.onConnect.addPingListener.addPongListener.onPing.onPong.addListeners.addListeners.addListeners.joinRoom.joinRooms.dispatch.join.join.leaveRoom.leaveRooms.leave.leave.addAuthTokenListener": [
+            "result.isSuccess",
+            "add",
+            "listener.getAuthTokenResult",
+            "exceptionListener.onAuthException"
+        ],
+        "NamespacesHub.remove": [
+            "namespaces.remove",
+            "namespaces.values",
+            "namespace.getBroadcastOperations",
+            "disconnect"
+        ],
+        "JacksonJsonSupport.EventKey.ByteArraySerializer.serialize": [
+            "size",
+            "add",
+            "map.put",
+            "jgen.writeObject",
+            "arrays.get"
+        ],
+        "JacksonJsonSupport.EventKey.ByteArraySerializer.serialize.serializeWithType": [
+            "serialize",
+            "o.set",
+            "createSchemaNode"
+        ],
+        "JacksonJsonSupport.EventKey.ByteArraySerializer.serialize.serializeWithType.acceptJsonFormatVisitor": [
+            "visitor.expectArrayFormat",
+            "v2.itemsFormat",
+            "arrays.get"
+        ],
+        "JacksonJsonSupport.EventKey.ByteArraySerializer.serialize.serializeWithType.acceptJsonFormatVisitor.clear": [
+            "arrays.set"
+        ],
+        "JacksonJsonSupport.EventKey.ExBeanSerializerModifier.serialize.serializeWithType.acceptJsonFormatVisitor.clear": [
+            "equals",
+            "valueType.getRawClass"
+        ],
+        "JacksonJsonSupport.EventKey.serialize.serializeWithType.acceptJsonFormatVisitor.clear": [
+            "init",
+            "LoggerFactory.getLogger",
+            "objectMapper.registerModules"
+        ],
+        "JacksonJsonSupport.EventKey.serialize.serializeWithType.acceptJsonFormatVisitor.clear.init": [
+            "objectMapper.configure",
+            "objectMapper.registerModule",
+            "module.addDeserializer",
+            "module.setSerializerModifier",
+            "objectMapper.setSerializationInclusion"
+        ],
+        "JacksonJsonSupport.EventKey.serialize.serializeWithType.acceptJsonFormatVisitor.clear.init.addEventMapping": [
+            "eventDeserializer.eventMapping.put"
+        ],
+        "JacksonJsonSupport.EventKey.serialize.serializeWithType.acceptJsonFormatVisitor.clear.init.addEventMapping.removeEventMapping": [
+            "currentAckClass.set",
+            "objectMapper.readValue",
+            "namespaceClass.set",
+            "eventDeserializer.eventMapping.remove"
+        ],
+        "JacksonJsonSupport.EventKey.serialize.serializeWithType.acceptJsonFormatVisitor.clear.init.addEventMapping.removeEventMapping.writeValue": [
+            "modifier.getSerializer",
+            "clear",
+            "objectMapper.writeValue",
+            "getArrays"
+        ],
+        "Packet.setSubType.setData": [
+            "newPacket.setDataSource",
+            "newPacket.setNsp",
+            "equalsIgnoreCase",
+            "newPacket.setName",
+            "newPacket.setData",
+            "newPacket.setSubType",
+            "newPacket.setAckId"
+        ],
+        "Packet.setSubType.setData.setNsp": [
+            "endpoint.equals"
+        ],
+        "Packet.setSubType.setData.setNsp.setName.setAckId": [
+            "getAckId"
+        ],
+        "Packet.setSubType.setData.setNsp.setName.setAckId.initAttachments.addAttachment": [
+            "size",
+            "add"
+        ],
+        "PacketDecoder.parseHeader": [
+            "attachBuf.release",
+            "head.setLastBinaryPacket",
+            "Long.valueOf",
+            "frame.readByte",
+            "Base64.encode",
+            "frame.readShort",
+            "slices.add",
+            "frame.getByte",
+            "packet.initAttachments",
+            "frame.bytesBefore",
+            "frame.skipBytes",
+            "scanValue.readableBytes",
+            "nspAckId.split",
+            "Unpooled.wrappedBuffer",
+            "Unpooled.copiedBuffer",
+            "packet.setAckId",
+            "get",
+            "source.slice",
+            "binaryPacket.isAttachmentsLoaded",
+            "head.getEngineIOVersion",
+            "readString",
+            "source.readerIndex",
+            "oldFrame.readerIndex",
+            "binaryPacket.addAttachment",
+            "size",
+            "slices.toArray",
+            "frame.readableBytes",
+            "binaryPacket.getDataSource",
+            "binaryPacket.getAttachments",
+            "PacketType.BINARY_ACK.equals",
+            "PacketType.BINARY_EVENT.equals",
+            "packet.setNsp",
+            "head.getLastBinaryPacket",
+            "frame.slice",
+            "readLong",
+            "PacketEncoder.find",
+            "parseBody",
+            "frame.readerIndex"
+        ],
+        "PacketDecoder.parseHeader.parseBody": [
+            "jsonSupport.readAckArgs",
+            "namespace.startsWith",
+            "head.setLastBinaryPacket",
+            "readString",
+            "event.getArgs",
+            "packet.getType",
+            "packet.getSubType",
+            "packet.hasAttachments",
+            "packet.isAttachmentsLoaded",
+            "packet.setDataSource",
+            "packet.getAckId",
+            "packet.setName",
+            "args.getArgs",
+            "event.getName",
+            "packet.getNsp",
+            "frame.skipBytes",
+            "frame.readableBytes",
+            "readNamespace",
+            "buffer.bytesBefore",
+            "packet.setData",
+            "packet.setNsp",
+            "Unpooled.copiedBuffer",
+            "head.getSessionId",
+            "jsonSupport.readValue",
+            "frame.slice",
+            "ackManager.getCallback"
+        ],
+        "PacketEncoder.encodeJsonP": [
+            "toChars",
+            "processUtf8",
+            "packetBuf.release",
+            "packet.getAttachments",
+            "encodedBuf.readableBytes",
+            "encodePacket",
+            "Base64.encode",
+            "buf.writeBytes",
+            "out.writeBytes",
+            "packets.poll",
+            "packetBuf.writerIndex",
+            "buf.release",
+            "allocateBuffer"
+        ],
+        "PacketEncoder.encodeJsonP.processUtf8": [
+            "in.isReadable",
+            "out.writeByte",
+            "in.readByte"
+        ],
+        "PacketEncoder.encodeJsonP.processUtf8.encodePackets": [
+            "attachment.readableBytes",
+            "packet.getEngineIOVersion",
+            "EngineIOVersion.V3.equals",
+            "buffer.writeByte",
+            "buffer.writeBytes",
+            "packet.getAttachments",
+            "encodePacket",
+            "longToBytes",
+            "packets.poll",
+            "EngineIOVersion.V4.equals"
+        ],
+        "PacketEncoder.encodeJsonP.processUtf8.encodePackets.getChars": [
+            "stringSize",
+            "getChars"
+        ],
+        "PacketEncoder.encodeJsonP.processUtf8.encodePackets.getChars.encodePacket": [
+            "packet.getEngineIOVersion",
+            "packet.addAttachment",
+            "buffer.writeBytes",
+            "getValue",
+            "buf.writeBytes",
+            "encBuf.release",
+            "longToBytes",
+            "buffer.getByte",
+            "toChar",
+            "packet.initAttachments",
+            "jsonSupport.getArrays",
+            "buf.writerIndex",
+            "buf.release",
+            "search.getByte",
+            "values.add",
+            "packet.getNsp",
+            "buf.writeByte",
+            "Unpooled.wrappedBuffer",
+            "buffer.readerIndex",
+            "packet.setSubType",
+            "isValueFound",
+            "allocateBuffer",
+            "toChars",
+            "buffer.writeByte",
+            "values.addAll",
+            "packet.getType",
+            "packet.getSubType",
+            "packet.hasAttachments",
+            "search.readableBytes",
+            "EngineIOVersion.V4.equals",
+            "packet.getAckId",
+            "getBytes",
+            "size",
+            "packet.getData",
+            "packet.getAttachments",
+            "toString",
+            "isEmpty",
+            "packet.getName",
+            "buffer.readableBytes",
+            "jsonSupport.writeValue"
+        ],
+        "HashedWheelScheduler.update.cancel": [
+            "timeout.cancel",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run": [
+            "runnable.run"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback.run": [
+            "ctx.executor",
+            "execute"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback.run.run": [
+            "scheduledFutures.put",
+            "runnable.run",
+            "timeout.isExpired",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule.run": [
+            "scheduledFutures.put",
+            "runnable.run",
+            "timeout.isExpired",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule.run.shutdown": [
+            "executorService.stop"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel": [
+            "timeout.cancel",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run": [
+            "runnable.run"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run": [
+            "ctx.executor",
+            "execute"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run.run": [
+            "replaceScheduledFuture",
+            "runnable.run",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule": [
+            "executorService.newTimeout"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule.run": [
+            "replaceScheduledFuture",
+            "runnable.run",
+            "scheduledFutures.remove"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule.run.shutdown": [
+            "executorService.stop"
+        ],
+        "HashedWheelTimeoutScheduler.update.cancel.schedule.run.scheduleCallback.run.run.schedule.run.shutdown.replaceScheduledFuture": [
+            "scheduledFutures.put",
+            "oldTimeout.cancel",
+            "scheduledFutures.remove",
+            "newTimeout.isExpired"
+        ],
+        "HazelcastPubSubStore.publish": [
+            "msg.setNodeId",
+            "type.toString",
+            "hazelcastPub.getTopic",
+            "publish"
+        ],
+        "HazelcastPubSubStore.publish.subscribe": [
+            "topic.addMessageListener",
+            "hazelcastSub.getTopic",
+            "type.toString"
+        ],
+        "HazelcastPubSubStore.publish.subscribe.onMessage": [
+            "list.add",
+            "map.putIfAbsent",
+            "map.get",
+            "msg.getNodeId",
+            "listener.onMessage",
+            "nodeId.equals",
+            "message.getMessageObject"
+        ],
+        "HazelcastPubSubStore.publish.subscribe.onMessage.unsubscribe": [
+            "topic.removeMessageListener",
+            "map.remove",
+            "hazelcastSub.getTopic",
+            "type.toString"
+        ],
+        "HazelcastStore.set": [
+            "map.containsKey",
+            "map.put",
+            "map.get"
+        ],
+        "HazelcastStore.set.del": [
+            "map.delete"
+        ],
+        "HazelcastStoreFactory.shutdown": [
+            "hazelcastPub.shutdown",
+            "hazelcastSub.shutdown",
+            "hazelcastClient.getMap",
+            "hazelcastClient.shutdown"
+        ],
+        "MemoryStore.set": [
+            "store.containsKey",
+            "store.get",
+            "store.put"
+        ],
+        "MemoryStore.set.del": [
+            "store.remove"
+        ],
+        "MemoryStoreFactory.shutdown": [
+            "PlatformDependent.newConcurrentHashMap",
+            "getClass",
+            "getSimpleName"
+        ],
+        "RedissonPubSubStore.publish": [
+            "msg.setNodeId",
+            "publish",
+            "type.toString",
+            "redissonPub.getTopic"
+        ],
+        "RedissonPubSubStore.publish.subscribe": [
+            "topic.addListener",
+            "redissonSub.getTopic",
+            "type.toString"
+        ],
+        "RedissonPubSubStore.publish.subscribe.onMessage": [
+            "list.add",
+            "map.putIfAbsent",
+            "map.get",
+            "msg.getNodeId",
+            "listener.onMessage",
+            "nodeId.equals"
+        ],
+        "RedissonPubSubStore.publish.subscribe.onMessage.unsubscribe": [
+            "topic.removeListener",
+            "map.remove",
+            "redissonSub.getTopic",
+            "type.toString"
+        ],
+        "RedissonStore.set": [
+            "map.containsKey",
+            "map.put",
+            "map.get"
+        ],
+        "RedissonStore.set.del": [
+            "map.remove"
+        ],
+        "RedissonStoreFactory.shutdown": [
+            "redisSub.shutdown",
+            "redisPub.shutdown",
+            "redisClient.getMap",
+            "redisClient.shutdown"
+        ],
+        "BaseStoreFactory.init": [
+            "pubSubStore",
+            "subscribe"
+        ],
+        "BaseStoreFactory.init.onMessage": [
+            "log.debug",
+            "msg.getSessionId",
+            "pubSubStore",
+            "subscribe"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage": [
+            "msg.getSessionId",
+            "pubSubStore",
+            "authorizeHandler.connect",
+            "subscribe",
+            "log.debug"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage": [
+            "msg.getPacket",
+            "namespacesHub.get",
+            "log.debug",
+            "msg.getNamespace",
+            "n.dispatch",
+            "pubSubStore",
+            "subscribe",
+            "msg.getRoom"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage.onMessage": [
+            "namespacesHub.get",
+            "log.debug",
+            "msg.getNamespace",
+            "msg.getSessionId",
+            "pubSubStore",
+            "n.join",
+            "subscribe",
+            "msg.getRoom"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage.onMessage.onMessage": [
+            "namespacesHub.get",
+            "log.debug",
+            "msg.getRooms",
+            "msg.getNamespace",
+            "msg.getSessionId",
+            "pubSubStore",
+            "n.join",
+            "subscribe"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage.onMessage.onMessage.onMessage": [
+            "namespacesHub.get",
+            "log.debug",
+            "msg.getNamespace",
+            "msg.getSessionId",
+            "pubSubStore",
+            "n.leave",
+            "subscribe",
+            "msg.getRoom"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage.onMessage.onMessage.onMessage.onMessage": [
+            "msg.getSessionId",
+            "namespacesHub.get",
+            "n.leave",
+            "log.debug",
+            "msg.getRooms",
+            "msg.getNamespace"
+        ],
+        "BaseStoreFactory.init.onMessage.onMessage.onMessage.onMessage.onMessage.onMessage.onMessage.onDisconnect": [
+            "getClass",
+            "getSimpleName"
+        ],
+        "NamespaceClient.sendEvent": [
+            "getEngineIOVersion",
+            "send",
+            "packet.setName",
+            "packet.setSubType",
+            "packet.setData"
+        ],
+        "NamespaceClient.sendEvent.sendEvent": [
+            "getEngineIOVersion",
+            "send",
+            "packet.setData",
+            "baseClient.isConnected",
+            "isWritable",
+            "isConnected",
+            "disconnected.get",
+            "packet.setSubType",
+            "packet.setName"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send": [
+            "isConnected",
+            "registerAck",
+            "baseClient.getAckManager",
+            "send",
+            "packet.setAckId",
+            "getSessionId",
+            "ackCallback.onTimeout"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send": [
+            "namespace.getName",
+            "baseClient.send",
+            "isConnected",
+            "packet.withNsp",
+            "baseClient.getEngineIOVersion"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect": [
+            "baseClient.getSessionId",
+            "namespace.onDisconnect",
+            "getNamespace",
+            "log.debug",
+            "getName",
+            "baseClient.removeNamespaceClient",
+            "disconnected.set"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect": [
+            "getEngineIOVersion",
+            "baseClient.getRemoteAddress",
+            "other.getNamespace",
+            "send",
+            "hashCode",
+            "getNamespace",
+            "getName",
+            "getSessionId",
+            "getClass",
+            "equals",
+            "baseClient.getSessionId",
+            "other.getSessionId",
+            "packet.setSubType",
+            "obj.getClass"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom": [
+            "namespace.joinRoom",
+            "getSessionId"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom.joinRooms": [
+            "namespace.joinRooms",
+            "getSessionId"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom.joinRooms.leaveRoom": [
+            "getSessionId",
+            "namespace.leaveRoom"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom.joinRooms.leaveRoom.leaveRooms": [
+            "namespace.leaveRooms",
+            "getSessionId"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom.joinRooms.leaveRoom.leaveRooms.set": [
+            "get",
+            "set",
+            "has",
+            "baseClient.getStore"
+        ],
+        "NamespaceClient.sendEvent.sendEvent.send.send.onDisconnect.disconnect.joinRoom.joinRooms.leaveRoom.leaveRooms.set.del": [
+            "namespace.getRoomClientsInCluster",
+            "namespace.getRooms",
+            "del",
+            "baseClient.getHandshakeData",
+            "baseClient.getStore"
+        ],
+        "PollingTransport.channelRead": [
+            "get",
+            "transport.get",
+            "ctx.channel",
+            "req.uri",
+            "client.getSessionId",
+            "req.release",
+            "attr",
+            "ctx.fireChannelRead",
+            "req.headers",
+            "set",
+            "j.get",
+            "NAME.equals",
+            "b64.get",
+            "UUID.fromString",
+            "equals",
+            "sid.get",
+            "handleMessage",
+            "queryDecoder.parameters"
+        ],
+        "PollingTransport.channelRead.handleMessage": [
+            "get",
+            "ctx.channel",
+            "HttpMethod.POST.equals",
+            "onOptions",
+            "HttpMethod.GET.equals",
+            "sendError",
+            "log.error",
+            "req.headers",
+            "req.content",
+            "writeAndFlush",
+            "containsKey",
+            "clientsBox.get",
+            "onGet",
+            "HttpMethod.OPTIONS.equals",
+            "req.method",
+            "onPost",
+            "queryDecoder.parameters",
+            "client.onChannelDisconnect"
+        ],
+        "PollingTransport.channelRead.handleMessage.onOptions": [
+            "sendError",
+            "ctx.channel",
+            "log.error",
+            "clientsBox.get",
+            "writeAndFlush"
+        ],
+        "PollingTransport.channelRead.handleMessage.onOptions.onPost": [
+            "get",
+            "ctx.channel",
+            "decoder.preprocessJson",
+            "clientsBox.get",
+            "fireChannelRead",
+            "sendError",
+            "attr",
+            "log.error",
+            "ctx.pipeline",
+            "writeAndFlush"
+        ],
+        "PollingTransport.channelRead.handleMessage.onOptions.onPost.onGet": [
+            "client.bindChannel",
+            "sendError",
+            "ctx.channel",
+            "log.error",
+            "authorizeHandler.connect",
+            "clientsBox.get"
+        ],
+        "PollingTransport.channelRead.handleMessage.onOptions.onPost.onGet.sendError": [
+            "ctx.channel",
+            "addListener",
+            "writeAndFlush"
+        ],
+        "PollingTransport.channelRead.handleMessage.onOptions.onPost.onGet.sendError.channelInactive": [
+            "ctx.channel",
+            "client.isTransportChannel",
+            "clientsBox.get",
+            "log.debug",
+            "client.getSessionId",
+            "client.releasePollingChannel"
+        ],
+        "WebSocketTransport.channelRead": [
+            "transport.get",
+            "configuration.getTransports",
+            "close",
+            "get",
+            "ctx.channel",
+            "addListener",
+            "req.uri",
+            "log.debug",
+            "contains",
+            "client.getSessionId",
+            "req.release",
+            "attr",
+            "ctx.fireChannelRead",
+            "frame.content",
+            "ctx.pipeline",
+            "writeAndFlush",
+            "handshake",
+            "clientsBox.get",
+            "NAME.equals",
+            "fireChannelRead",
+            "queryDecoder.path",
+            "UUID.fromString",
+            "sid.get",
+            "frame.release",
+            "queryDecoder.parameters"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete": [
+            "ctx.flush",
+            "ctx.channel",
+            "client.isTransportChannel",
+            "clientsBox.get"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive": [
+            "ctx.channel",
+            "clientsBox.get",
+            "log.debug",
+            "client.getSessionId",
+            "client.getEngineIOVersion",
+            "ctx.close",
+            "client.onChannelDisconnect",
+            "client.send",
+            "client.isTransportChannel",
+            "packet.setSubType",
+            "channel.close"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive.handshake": [
+            "configuration.getMaxFramePayloadLength",
+            "ctx.channel",
+            "factory.newHandshaker",
+            "handshaker.handshake",
+            "f.addListener",
+            "getWebSocketLocation"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive.handshake.operationComplete": [
+            "configuration.getMaxFramePayloadLength",
+            "channel.pipeline",
+            "future.cause",
+            "WebSocketServerHandshakerFactory.sendUnsupportedVersionResponse",
+            "ctx.channel",
+            "connectClient",
+            "closeClient",
+            "log.error",
+            "log.warn",
+            "future.isSuccess",
+            "e.getMessage",
+            "addBefore"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive.handshake.operationComplete.closeClient": [
+            "log.warn",
+            "clientHead.disconnect",
+            "clientsBox.removeClient",
+            "channel.close",
+            "log.info"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive.handshake.operationComplete.closeClient.connectClient": [
+            "client.bindChannel",
+            "channel.remoteAddress",
+            "authorizeHandler.connect",
+            "clientsBox.get",
+            "closeClient",
+            "log.warn",
+            "client.getCurrentTransport",
+            "scheduler.schedule"
+        ],
+        "WebSocketTransport.channelRead.channelReadComplete.channelInactive.handshake.operationComplete.closeClient.connectClient.run": [
+            "get",
+            "log.isDebugEnabled",
+            "req.uri",
+            "clientsBox.get",
+            "log.debug",
+            "configuration.getUpgradeTimeout",
+            "req.headers",
+            "clientHead.onChannelDisconnect"
+        ],
+        "JoinIteratorsTest.testIterator": [
+            "list1.size",
+            "mainList.removeAll",
+            "Assert.assertTrue",
+            "mainList.add",
+            "mainList.isEmpty",
+            "mainList.size",
+            "list2.size",
+            "Assert.assertEquals"
+        ],
+        "DecoderAckPacketTest.testDecode": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "Assert.assertEquals",
+            "packet.getAckId"
+        ],
+        "DecoderAckPacketTest.testDecode.testDecodeWithArgs": [
+            "initExpectations",
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "Assert.assertEquals",
+            "packet.getAckId"
+        ],
+        "DecoderAckPacketTest.testDecode.testDecodeWithArgs.initExpectations": [
+            "ackManager.getCallback"
+        ],
+        "DecoderAckPacketTest.testDecode.testDecodeWithArgs.initExpectations.onSuccess.testDecodeWithBadJson": [
+            "decoder.decodePackets",
+            "initExpectations",
+            "Unpooled.copiedBuffer"
+        ],
+        "DecoderConnectionPacketTest.testDecodeHeartbeat": [
+            "decoder.decodePackets",
+            "Unpooled.copiedBuffer"
+        ],
+        "DecoderConnectionPacketTest.testDecodeHeartbeat.testDecode": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "packet.getNsp",
+            "Assert.assertEquals"
+        ],
+        "DecoderConnectionPacketTest.testDecodeHeartbeat.testDecode.testDecodeWithQueryString": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "packet.getNsp",
+            "Assert.assertEquals"
+        ],
+        "DecoderConnectionPacketTest.testDecodeHeartbeat.testDecode.testDecodeWithQueryString.testDecodeDisconnection": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "packet.getNsp",
+            "Assert.assertEquals"
+        ],
+        "DecoderEventPacketTest.testDecode": [
+            "Unpooled.copiedBuffer",
+            "packet.getName",
+            "packet.getType",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "DecoderEventPacketTest.testDecode.testDecodeWithMessageIdAndAck": [
+            "Unpooled.copiedBuffer",
+            "packet.getName",
+            "packet.getType",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "DecoderEventPacketTest.testDecode.testDecodeWithMessageIdAndAck.testDecodeWithData": [
+            "jsonSupport.addEventMapping",
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "packet.getName",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "DecoderJsonPacketTest.testUTF8Decode": [
+            "decoder.decodePackets",
+            "Assert.assertEquals",
+            "Unpooled.copiedBuffer",
+            "packet.getData"
+        ],
+        "DecoderJsonPacketTest.testUTF8Decode.testDecode": [
+            "decoder.decodePackets",
+            "Assert.assertEquals",
+            "Unpooled.copiedBuffer",
+            "packet.getData"
+        ],
+        "DecoderJsonPacketTest.testUTF8Decode.testDecode.testDecodeWithMessageIdAndAckData": [
+            "obj.size",
+            "Unpooled.copiedBuffer",
+            "obj.get",
+            "packet.getData",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "DecoderMessagePacketTest.testDecodeId": [
+            "decoder.decodePackets",
+            "Assert.assertEquals",
+            "Unpooled.copiedBuffer",
+            "packet.getType"
+        ],
+        "DecoderMessagePacketTest.testDecodeId.testDecode": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "packet.getData",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "DecoderMessagePacketTest.testDecodeId.testDecode.testDecodeWithIdAndEndpoint": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "decoder.decodePackets",
+            "packet.getNsp",
+            "Assert.assertEquals"
+        ],
+        "EncoderAckPacketTest.testEncode": [
+            "Unpooled.buffer",
+            "packet.setAckId",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "EncoderAckPacketTest.testEncode.testEncodeWithArgs": [
+            "Unpooled.buffer",
+            "packet.setAckId",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "EncoderConnectionPacketTest.testEncodeHeartbeat.testEncodeDisconnection": [
+            "Unpooled.buffer",
+            "packet.setNsp",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "EncoderConnectionPacketTest.testEncodeHeartbeat.testEncodeDisconnection.testEncode": [
+            "Unpooled.buffer",
+            "packet.setNsp",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "EncoderConnectionPacketTest.testEncodeHeartbeat.testEncodeDisconnection.testEncode.testEncodePacketWithQueryString": [
+            "Unpooled.buffer",
+            "packet.setNsp",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "EncoderEventPacketTest.testEncode": [
+            "Unpooled.buffer",
+            "result.toString",
+            "Assert.assertEquals",
+            "packet.setName"
+        ],
+        "EncoderEventPacketTest.testEncode.testEncodeWithMessageIdAndAck": [
+            "Unpooled.buffer",
+            "result.toString",
+            "Assert.assertEquals",
+            "packet.setName"
+        ],
+        "EncoderEventPacketTest.testEncode.testEncodeWithMessageIdAndAck.testEncodeWithData": [
+            "Unpooled.buffer",
+            "result.toString",
+            "Assert.assertEquals",
+            "packet.setName"
+        ],
+        "EncoderMessagePacketTest.testEncode": [
+            "Unpooled.buffer",
+            "result.toString",
+            "Assert.assertEquals",
+            "packet.setData"
+        ],
+        "EncoderMessagePacketTest.testEncode.testEncodeWithIdAndEndpoint": [
+            "Unpooled.buffer",
+            "packet.setNsp",
+            "result.toString",
+            "Assert.assertEquals"
+        ],
+        "PayloadTest.testPayloadDecode": [
+            "buffer.isReadable",
+            "msg1.getData",
+            "msg2.getType",
+            "payload.get",
+            "msg3.getType",
+            "Unpooled.wrappedBuffer",
+            "payload.add",
+            "msg2.getData",
+            "decoder.decodePackets",
+            "payload.size",
+            "msg1.getType",
+            "Assert.assertEquals",
+            "getBytes"
+        ],
+        "PayloadTest.testPayloadDecode.testPayloadEncode": [
+            "packets.add",
+            "packet2.setData",
+            "result.toString",
+            "Unpooled.buffer",
+            "Assert.assertEquals",
+            "packet1.setData"
+        ],
+        "PayloadTest.testPayloadDecode.testPayloadEncode.testDecodingNewline": [
+            "Unpooled.copiedBuffer",
+            "packet.getType",
+            "packet.getData",
+            "decoder.decodePackets",
+            "Assert.assertEquals"
+        ],
+        "PacketTest.packetCopyIsCreatedWhenNamespaceDiffers": [
+            "newPacket.getNsp",
+            "assertEquals",
+            "oldPacket.withNsp",
+            "createPacket",
+            "assertPacketCopied"
+        ],
+        "PacketTest.packetCopyIsCreatedWhenNamespaceDiffers.packetCopyIsCreatedWhenNewNamespaceDiffersAndIsNull": [
+            "newPacket.getNsp",
+            "assertNull",
+            "packet.withNsp",
+            "createPacket",
+            "assertPacketCopied"
+        ],
+        "PacketTest.packetCopyIsCreatedWhenNamespaceDiffers.packetCopyIsCreatedWhenNewNamespaceDiffersAndIsNull.originalPacketReturnedIfNamespaceIsTheSame": [
+            "packet.withNsp",
+            "assertSame"
+        ],
+        "PacketTest.packetCopyIsCreatedWhenNamespaceDiffers.packetCopyIsCreatedWhenNewNamespaceDiffersAndIsNull.originalPacketReturnedIfNamespaceIsTheSame.assertPacketCopied": [
+            "oldPacket.getDataSource",
+            "packet.addAttachment",
+            "assertEquals",
+            "newPacket.getSubType",
+            "newPacket.getAttachments",
+            "newPacket.getDataSource",
+            "newPacket.getName",
+            "oldPacket.getAckId",
+            "assertNotSame",
+            "packet.initAttachments",
+            "packet.setDataSource",
+            "packet.setName",
+            "oldPacket.getType",
+            "size",
+            "newPacket.getAckId",
+            "oldPacket.getData",
+            "packet.setData",
+            "newPacket.getData",
+            "newPacket.getType",
+            "packet.setNsp",
+            "Unpooled.wrappedBuffer",
+            "oldPacket.getSubType",
+            "oldPacket.getAttachments",
+            "oldPacket.getName",
+            "packet.setAckId",
+            "packet.setSubType",
+            "assertSame"
+        ],
+        "HttpTransportTest.createTestServer": [
+            "config.setPort",
+            "config.setTransports",
+            "config.setRandomSession",
+            "findFreePort",
+            "config.setExceptionListener"
+        ],
+        "HttpTransportTest.createTestServer.onEventException": [
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException": [
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException": [
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException": [
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException": [
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException": [
+            "config.setSocketConfig",
+            "socketConfig.setReuseAddress",
+            "start",
+            "logger.error"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException.cleanupTestServer": [
+            "http.setRequestProperty",
+            "http.getInputStream",
+            "http.setFixedLengthStreamingMode",
+            "http.connect",
+            "reader.lines",
+            "getContext",
+            "openConnection",
+            "createTestServerUri",
+            "http.setDoOutput",
+            "Collectors.joining",
+            "getBytes",
+            "os.write",
+            "server.getConfiguration",
+            "getPort",
+            "uri.toURL",
+            "collect",
+            "http.getOutputStream",
+            "bodyForPost.toString",
+            "http.setRequestMethod",
+            "stop"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException.cleanupTestServer.postMessage": [
+            "mapper.readTree",
+            "asText",
+            "makeSocketIoRequest",
+            "jsonMatcher.find",
+            "Assert.assertTrue",
+            "pollForListOfResponses",
+            "responseJsonMatcher.matcher",
+            "jsonMatcher.group",
+            "responseStr.split",
+            "node.get",
+            "Assert.assertEquals"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException.cleanupTestServer.postMessage.testConnect": [
+            "connectForSessionId",
+            "Assert.assertNotNull"
+        ],
+        "HttpTransportTest.createTestServer.onEventException.onDisconnectException.onConnectException.onPingException.onPongException.onAuthException.cleanupTestServer.postMessage.testConnect.testMultipleMessages": [
+            "events.stream",
+            "socket.setReuseAddress",
+            "postMessage",
+            "server.addEventListener",
+            "socket.close",
+            "collect",
+            "pollForListOfResponses",
+            "connectForSessionId",
+            "ackSender.sendAckData",
+            "events.add",
+            "Assert.assertEquals",
+            "Collectors.joining",
+            "socket.getLocalPort"
+        ],
+        "WebSocketTransportTest.testCloseFrame": [
+            "channel.writeInbound",
+            "createChannel",
+            "channel.readOutbound",
+            "assertTrue"
+        ]
+    },
+    "class_calls": {
+        "AckCallback": [],
+        "AckRequest": [
+            "Packet",
+            "AtomicBoolean"
+        ],
+        "AuthorizationResult": [
+            "AuthorizationResult"
+        ],
+        "AuthTokenResult": [
+            "AuthTokenResult"
+        ],
+        "BroadcastAckCallback": [
+            "AckCallback",
+            "AtomicInteger",
+            "AtomicBoolean"
+        ],
+        "Configuration": [
+            "SocketConfig",
+            "DefaultExceptionListener",
+            "IllegalArgumentException",
+            "SuccessAuthorizationListener",
+            "JsonSupportWrapper",
+            "MemoryStoreFactory"
+        ],
+        "HandshakeData": [
+            "Date"
+        ],
+        "JsonSupportWrapper": [
+            "IOException"
+        ],
+        "MultiRoomBroadcastOperations": [
+            "HashSet"
+        ],
+        "MultiTypeAckCallback": [],
+        "MultiTypeArgs": [],
+        "SingleRoomBroadcastOperations": [
+            "IterableCollection",
+            "Packet",
+            "DispatchMessage"
+        ],
+        "SocketConfig": [],
+        "SocketIOChannelInitializer": [
+            "DisconnectMessage",
+            "PollingTransport",
+            "AckManager",
+            "AuthorizeHandler",
+            "ClientsBox",
+            "WebSocketTransport",
+            "PacketListener",
+            "HttpRequestDecoder",
+            "HttpResponseEncoder",
+            "EncoderHandler",
+            "HashedWheelTimeoutScheduler",
+            "InPacketHandler",
+            "WrongUrlHandler",
+            "PacketDecoder",
+            "HttpContentCompressor",
+            "WebSocketServerCompressionHandler",
+            "IllegalStateException",
+            "PacketEncoder",
+            "SslHandler",
+            "HttpObjectAggregator"
+        ],
+        "SocketIOServer": [
+            "FixedRecvByteBufAllocator",
+            "SocketIOChannelInitializer",
+            "ArrayList",
+            "FutureListener",
+            "EpollEventLoopGroup",
+            "NamespacesHub",
+            "Configuration",
+            "MultiRoomBroadcastOperations",
+            "NioEventLoopGroup",
+            "WriteBufferWaterMark",
+            "InetSocketAddress",
+            "ServerBootstrap"
+        ],
+        "VoidAckCallback": [],
+        "AckManager": [],
+        "AckManager.AckEntry": [
+            "MultiTypeArgs",
+            "AtomicLong",
+            "AckEntry",
+            "Runnable",
+            "AckSchedulerKey"
+        ],
+        "AckSchedulerKey": [],
+        "OnConnectScanner": [
+            "IllegalArgumentException",
+            "SocketIOException",
+            "ConnectListener"
+        ],
+        "OnDisconnectScanner": [
+            "IllegalArgumentException",
+            "DisconnectListener",
+            "SocketIOException"
+        ],
+        "OnEventScanner": [
+            "IllegalArgumentException",
+            "MultiTypeEventListener",
+            "ArrayList",
+            "SocketIOException",
+            "DataListener"
+        ],
+        "ScannerEngine": [
+            "OnConnectScanner",
+            "OnEventScanner",
+            "OnDisconnectScanner"
+        ],
+        "SpringAnnotationScanner": [
+            "MethodCallback",
+            "MethodFilter",
+            "AtomicBoolean"
+        ],
+        "AuthorizeHandler": [
+            "SchedulerKey",
+            "HandshakeData",
+            "HashMap",
+            "ClientHead",
+            "HttpErrorMessage",
+            "QueryStringDecoder",
+            "Runnable",
+            "DefaultHttpResponse",
+            "ConnectMessage",
+            "Packet",
+            "AuthPacket"
+        ],
+        "ClientHead": [
+            "ArrayList",
+            "TransportState",
+            "SchedulerKey",
+            "OutPacketMessage",
+            "HashMap",
+            "AtomicBoolean",
+            "NamespaceClient",
+            "Runnable",
+            "Packet"
+        ],
+        "ClientsBox": [],
+        "EncoderHandler": [
+            "BinaryWebSocketFrame",
+            "DefaultHttpContent",
+            "TextWebSocketFrame",
+            "ByteBufOutputStream",
+            "DefaultHttpResponse",
+            "Manifest",
+            "ContinuationWebSocketFrame",
+            "ChannelFutureList"
+        ],
+        "EncoderHandler.ChannelFutureList": [
+            "ArrayList"
+        ],
+        "InPacketHandler": [
+            "Packet",
+            "ConnPacket"
+        ],
+        "PacketListener": [
+            "SchedulerKey",
+            "Packet",
+            "AckRequest"
+        ],
+        "SocketIOException": [],
+        "SuccessAuthorizationListener": [],
+        "TransportState": [
+            "ConcurrentLinkedQueue"
+        ],
+        "WrongUrlHandler": [
+            "DefaultHttpResponse",
+            "QueryStringDecoder"
+        ],
+        "DefaultExceptionListener": [],
+        "ExceptionListenerAdapter": [],
+        "HttpErrorMessage": [],
+        "HttpMessage": [],
+        "OutPacketMessage": [],
+        "PacketsMessage": [],
+        "XHROptionsMessage": [],
+        "XHRPostMessage": [],
+        "CompositeIterable": [
+            "CompositeIterator",
+            "ArrayList"
+        ],
+        "CompositeIterator": [],
+        "IterableCollection": [
+            "CompositeIterable"
+        ],
+        "EventEntry": [
+            "ConcurrentLinkedQueue"
+        ],
+        "Namespace": [
+            "MultiTypeArgs",
+            "SingleRoomBroadcastOperations",
+            "HashSet",
+            "ArrayList",
+            "ConcurrentLinkedQueue",
+            "JoinLeaveMessage",
+            "BulkJoinLeaveMessage",
+            "MultiRoomBroadcastOperations",
+            "ScannerEngine",
+            "EventEntry",
+            "AuthTokenResult"
+        ],
+        "NamespacesHub": [
+            "CompositeIterable",
+            "Namespace",
+            "ArrayList"
+        ],
+        "AckArgs": [],
+        "AuthPacket": [],
+        "ConnPacket": [],
+        "Event": [],
+        "JacksonJsonSupport": [],
+        "JacksonJsonSupport.AckArgsDeserializer": [
+            "ArrayList",
+            "AckArgs"
+        ],
+        "JacksonJsonSupport.EventKey": [
+            "ExBeanSerializerModifier",
+            "ObjectMapper",
+            "EventDeserializer",
+            "EventKey",
+            "AckArgsDeserializer",
+            "SimpleModule",
+            "ThreadLocal"
+        ],
+        "JacksonJsonSupport.EventKey.EventDeserializer": [
+            "EventKey",
+            "Event",
+            "ArrayList"
+        ],
+        "JacksonJsonSupport.EventKey.ByteArraySerializer": [
+            "ThreadLocal",
+            "ArrayList",
+            "HashMap"
+        ],
+        "JacksonJsonSupport.EventKey.ExBeanSerializerModifier": [
+            "ByteArraySerializer"
+        ],
+        "Packet": [
+            "ArrayList",
+            "Packet"
+        ],
+        "PacketDecoder": [
+            "String",
+            "ByteBufInputStream",
+            "UTF8CharsScanner",
+            "LinkedList",
+            "Packet",
+            "IllegalStateException"
+        ],
+        "PacketEncoder": [
+            "ArrayList",
+            "ByteBufOutputStream"
+        ],
+        "UTF8CharsScanner": [
+            "IllegalStateException"
+        ],
+        "HashedWheelScheduler": [
+            "HashedWheelTimer",
+            "TimerTask",
+            "Runnable"
+        ],
+        "HashedWheelTimeoutScheduler": [
+            "HashedWheelTimer",
+            "TimerTask",
+            "Runnable"
+        ],
+        "SchedulerKey": [],
+        "HazelcastPubSubStore": [
+            "MessageListener",
+            "ConcurrentLinkedQueue"
+        ],
+        "HazelcastStore": [],
+        "HazelcastStoreFactory": [
+            "HazelcastStore",
+            "HazelcastPubSubStore"
+        ],
+        "MemoryPubSubStore": [],
+        "MemoryStore": [],
+        "MemoryStoreFactory": [
+            "MemoryStore",
+            "MemoryPubSubStore"
+        ],
+        "RedissonPubSubStore": [
+            "MessageListener",
+            "ConcurrentLinkedQueue"
+        ],
+        "RedissonStore": [],
+        "RedissonStoreFactory": [
+            "RedissonPubSubStore",
+            "RedissonStore"
+        ],
+        "BaseStoreFactory": [
+            "PubSubListener"
+        ],
+        "BulkJoinLeaveMessage": [],
+        "ConnectMessage": [],
+        "DisconnectMessage": [],
+        "DispatchMessage": [],
+        "JoinLeaveMessage": [],
+        "PubSubMessage": [],
+        "NamespaceClient": [
+            "Packet",
+            "AtomicBoolean"
+        ],
+        "PollingTransport": [
+            "QueryStringDecoder",
+            "XHROptionsMessage",
+            "DefaultHttpResponse",
+            "XHRPostMessage",
+            "PacketsMessage"
+        ],
+        "WebSocketTransport": [
+            "WebSocketFrameAggregator",
+            "WebSocketServerHandshakerFactory",
+            "SchedulerKey",
+            "ChannelFutureListener",
+            "QueryStringDecoder",
+            "Runnable",
+            "PacketsMessage",
+            "Packet"
+        ],
+        "JoinIteratorsTest": [
+            "CompositeIterable",
+            "ArrayList"
+        ],
+        "DecoderAckPacketTest": [
+            "AckCallback",
+            "Expectations"
+        ],
+        "DecoderBaseTest": [
+            "JacksonJsonSupport",
+            "PacketDecoder"
+        ],
+        "DecoderConnectionPacketTest": [],
+        "DecoderEventPacketTest": [
+            "JacksonJsonSupport",
+            "PacketDecoder"
+        ],
+        "DecoderJsonPacketTest": [],
+        "DecoderMessagePacketTest": [],
+        "EncoderAckPacketTest": [
+            "Packet"
+        ],
+        "EncoderBaseTest": [
+            "JacksonJsonSupport",
+            "Configuration",
+            "PacketEncoder"
+        ],
+        "EncoderConnectionPacketTest": [
+            "Packet"
+        ],
+        "EncoderEventPacketTest": [
+            "Packet"
+        ],
+        "EncoderMessagePacketTest": [
+            "Packet"
+        ],
+        "PayloadTest": [
+            "JacksonJsonSupport",
+            "ArrayList",
+            "PacketDecoder",
+            "PacketEncoder",
+            "ConcurrentLinkedQueue",
+            "Packet",
+            "Configuration"
+        ],
+        "PacketTest": [
+            "Packet"
+        ],
+        "HttpTransportTest": [
+            "InputStreamReader",
+            "ServerSocket",
+            "String",
+            "ArrayList",
+            "ObjectMapper",
+            "SocketIOServer",
+            "SocketConfig",
+            "Configuration",
+            "BufferedReader",
+            "IllegalStateException",
+            "ExceptionListener",
+            "URI"
+        ],
+        "WebSocketTransportTest": [
+            "CloseWebSocketFrame",
+            "WebSocketTransport",
+            "EmbeddedChannel"
+        ]
+    }
+}
