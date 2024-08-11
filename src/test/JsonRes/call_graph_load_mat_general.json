@@ -1,26 +1,9 @@
 {
-    "load_mat_general": [
-        "len",
-        "array",
-        "append",
-        "readlines",
-        "map",
-        "range",
-        "open",
-        "strip",
-        "getcwd",
-        "list",
-        "split"
-    ],
-    "len": [],
-    "array": [],
-    "append": [],
-    "readlines": [],
-    "map": [],
-    "range": [],
-    "open": [],
-    "strip": [],
-    "getcwd": [],
-    "list": [],
-    "split": []
+    "load_mat_general": {
+        "array": {},
+        "readlines": {},
+        "split": {},
+        "strip": {},
+        "getcwd": {}
+    }
 }

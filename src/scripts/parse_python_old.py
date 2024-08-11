@@ -2,7 +2,7 @@ import ast
 import os
 import json
 import argparse
-
+from pjson import restructure_json
 class FunctionCallVisitor(ast.NodeVisitor):
     def __init__(self):
         self.calls = {}
@@ -13,8 +13,6 @@ class FunctionCallVisitor(ast.NodeVisitor):
         self.main_file = None  # 记录主函数所在的文件
         self.main_functions = set()  # 记录所有的主函数
         self.main_files = []  # 记录每个主函数所在的文件
-        self.class_definitions = {}  # 记录对象名到类名的映射
-        self.current_class_name = None  # 记录当前访问的类名
 
         self.filter = {
         # Python 内置函数
@@ -24,61 +22,34 @@ class FunctionCallVisitor(ast.NodeVisitor):
         'filter', 'issubclass', 'pow', 'super', 'bytes', 'float', 'iter', 'print', 'tuple',
         'callable', 'format', 'len', 'property', 'type', 'chr', 'frozenset', 'list', 'range',
         'vars', 'classmethod', 'getattr', 'locals', 'repr', 'zip', 'compile', 'globals', 'map',
-        'reversed', 'import', 'complex', 'hasattr', 'max', 'round', '__import__', 'delattr', 'hash','listdir'
-        'memoryview', 'set','list','range','abs','append','getcwd',
+        'reversed', 'import', 'complex', 'hasattr', 'max', 'round', '__import__', 'delattr', 'hash',
+        'memoryview', 'set','list','range','abs','append','listdir','getcwd'
         # 常用标准库函数
-        'sys.exit','sum','max','min','sample','copy','len','range','le',
+        'os.path.join', 'os.path.exists', 'os.path.isfile', 'os.path.isdir', 'os.makedirs','isfile'
+        'sys.exit', 'json.dumps', 'json.loads','sum','max','min','sample','copy','len','range','le',
         # 其他常用库函数
-        'array', 'zeros', 'ones', 'empty', 'tqdm.tqdm', 'cv2.imread', 'cv2.imshow',
-        'tqdm','random','zeros','copy','read','join','split','strip'
+        'numpy.array', 'numpy.zeros', 'numpy.ones', 'numpy.empty', 'numpy.dot', 'numpy.linalg.inv',
+        'numpy.linalg.eig', 'pandas.DataFrame', 'pandas.read_csv', 'pandas.read_excel','read'
+        'matplotlib.pyplot.plot', 'matplotlib.pyplot.show', 'tqdm.tqdm', 'cv2.imread', 'cv2.imshow',
+        'tqdm','random','zeros','copy'
         }
-        self.common_libraries = {"math", "numpy","np", "os", "matplotlib","pandas","tqdm","file","json"}  # 忽略的常见库类名
-
-    def visit_ClassDef(self, node):
-        """
-        访问类定义，记录当前的类名。
-        """
-        self.current_class_name = node.name
-        self.generic_visit(node)
-        self.current_class_name = None  # 退出类定义时重置
 
     def visit_FunctionDef(self, node):
-        if self.current_class_name!=None:
-            self.current_function_name = f"{self.current_class_name}.{node.name}" 
-        else:
-            self.current_function_name = node.name    
+        self.current_function_name = node.name
         self.file_of_function[node.name] = self.current_file  # 记录函数所在的文件
         self.generic_visit(node)
         if self.current_function_name == self.main_function_name:
             self.main_file = self.current_file  # 记录主函数所在的文件
 
-    def visit_Assign(self, node):
-        """
-        访问变量赋值，记录对象的类名。
-        """
-        if isinstance(node.value, ast.Call) and isinstance(node.value.func, ast.Name):
-            class_name = node.value.func.id  # 获取类名
-            for target in node.targets:
-                if isinstance(target, ast.Name):
-                    self.class_definitions[target.id] = class_name  # 记录对象名到类名的映射
-        self.generic_visit(node)
-
     def visit_Call(self, node):
-        called_function_name = None
         if isinstance(node.func, ast.Name):
             called_function_name = node.func.id
         elif isinstance(node.func, ast.Attribute):
-            if isinstance(node.func.value, ast.Name):
-                obj_name = node.func.value.id
-                if self.get_class_name(obj_name) in self.common_libraries:
-                    return
-                called_function_name = f"{self.get_class_name(obj_name)}.{node.func.attr}"
-            else:
-                if self.current_class_name!=None:
-                    called_function_name = f"{self.current_class_name}.{node.func.attr}"    
-                called_function_name = node.func.attr
-        
-        if called_function_name and called_function_name not in self.filter and self.current_function_name not in self.filter:  # 检查被调用的函数名是否在过滤器中
+            called_function_name = node.func.attr
+        else:
+            called_function_name = None
+    
+        if called_function_name not in self.filter and self.current_function_name not in self.filter:  # 检查被调用的函数名是否在过滤器中
             if self.current_function_name in self.calls:
                 self.calls[self.current_function_name].add(called_function_name)
             else:
@@ -92,18 +63,14 @@ class FunctionCallVisitor(ast.NodeVisitor):
                 if len(node.test.ops) == 1 and isinstance(node.test.ops[0], ast.Eq):
                     if len(node.test.comparators) == 1 and isinstance(node.test.comparators[0], ast.Str) and node.test.comparators[0].s == '__main__':
                         self.current_function_name = node.test.comparators[0].s
+                        # self.main_functions.append(self.current_function_name)  # 记录主函数
                         self.main_files.append(self.current_file)  # 记录主函数所在的文件
         self.generic_visit(node)
-        if self.current_function_name == '__main__':
+        if self.current_function_name=='__main__':
             for item in self.calls[self.current_function_name]:
                 if item not in self.filter:
                     self.main_functions.add(item)  # 记录主函数
-    
-    def get_class_name(self, obj_name):
-        """
-        获取对象所属的类名，如果没有找到，返回对象名本身。
-        """
-        return self.class_definitions.get(obj_name, obj_name)
+
 
 def build_call_graph(directory):
     visitor = FunctionCallVisitor()
@@ -116,8 +83,8 @@ def build_call_graph(directory):
                 with open(file_path, "r",errors='ignore') as source:
                     tree = ast.parse(source.read())
                     visitor.visit(tree)
-    for item in visitor.calls:
-        print(item)
+    # for item in visitor.main_functions:
+    #     print(item)
     return visitor.calls, visitor.main_functions, visitor.main_files, visitor.call_order, visitor.file_of_function  # 返回所有的主函数和他们所在的文件
 
 def draw_graph(calls, main_function_name, call_order, file_of_function, output_file):
@@ -134,9 +101,10 @@ def draw_graph(calls, main_function_name, call_order, file_of_function, output_f
                 traverse(callee)
     
     traverse(main_function_name)
-    
-    with open(output_file, 'w') as f:
-        json.dump(node_calls, f, indent=4)
+    restructure_json(node_calls, output_file)
+
+    # with open(output_file, 'w') as f:
+    #     json.dump(node_calls, f, indent=4)
 
 def main():
     parser = argparse.ArgumentParser(description="Generate a function call graph.")
@@ -163,7 +131,7 @@ def main():
     for main_function_name in main_functions:
         output_file = os.path.join(output_directory, f'call_graph_{main_function_name}.json')
         draw_graph(calls, main_function_name, call_order, file_of_function, output_file)
-        # print("---------",main_function_name)
+        print("---------",main_function_name)
         with open(output_file, 'r') as f:
             function_call_data = json.load(f)
             overall_call_graph[main_function_name] = function_call_data

@@ -1,94 +1,49 @@
 {
-    "count_r": [
-        "array",
-        "count_hes",
-        "count_fuzz",
-        "range",
-        "multiply",
-        "final_count",
-        "abs",
-        "print"
-    ],
-    "array": [],
-    "count_hes": [
-        "range",
-        "min",
-        "array",
-        "max"
-    ],
-    "range": [],
-    "min": [],
-    "max": [],
-    "count_fuzz": [
-        "range",
-        "min",
-        "array",
-        "max"
-    ],
-    "multiply": [],
-    "final_count": [
-        "count_vgij",
-        "append",
-        "multi_add",
-        "zeros",
-        "range",
-        "count_vig",
-        "count_alle",
-        "count_similar",
-        "count_mcov",
-        "count_var",
-        "count_r",
-        "len"
-    ],
-    "count_vgij": [
-        "array",
-        "append",
-        "zeros",
-        "range",
-        "count_var2t",
-        "sum"
-    ],
-    "append": [],
-    "zeros": [],
-    "count_var2t": [
-        "range"
-    ],
-    "sum": [],
-    "multi_add": [
-        "sum",
-        "inside_proc"
-    ],
-    "inside_proc": [
-        "abs"
-    ],
-    "abs": [],
-    "count_vig": [
-        "array",
-        "range",
-        "sum",
-        "abs"
-    ],
-    "count_alle": [
-        "append",
-        "count_vig",
-        "range",
-        "multiply",
-        "countP"
-    ],
-    "countP": [
-        "array",
-        "range",
-        "sum",
-        "append"
-    ],
-    "count_similar": [
-        "sqrt"
-    ],
-    "sqrt": [],
-    "count_mcov": [],
-    "count_var": [
-        "range"
-    ],
-    "len": [],
-    "print": []
+    "count_r": {
+        "array": {},
+        "multiply": {},
+        "count_hes": {
+            "array": {}
+        },
+        "count_fuzz": {
+            "array": {}
+        },
+        "final_count": {
+            "count_similar": {
+                "sqrt": {}
+            },
+            "count_alle": {
+                "countP": {
+                    "array": {}
+                },
+                "count_vig": {
+                    "array": {}
+                },
+                "multiply": {}
+            },
+            "count_mcov": {},
+            "count_r": {
+                "array": {},
+                "multiply": {},
+                "count_hes": {
+                    "array": {}
+                },
+                "count_fuzz": {
+                    "array": {}
+                },
+                "final_count_SameNameMethodFromOtherClass": {}
+            },
+            "count_vig": {
+                "array": {}
+            },
+            "count_vgij": {
+                "count_var2t": {},
+                "array": {}
+            },
+            "multi_add": {
+                "inside_proc": {}
+            },
+            "count_var": {}
+        }
+    }
 }

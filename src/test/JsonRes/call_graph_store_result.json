@@ -1,8 +1,5 @@
 {
-    "store_result": [
-        "dump",
-        "open"
-    ],
-    "dump": [],
-    "open": []
+    "store_result": {
+        "dump": {}
+    }
 }

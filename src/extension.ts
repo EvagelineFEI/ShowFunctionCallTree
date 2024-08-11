@@ -5,6 +5,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as child_process from 'child_process';
 import { exec } from 'child_process';
+
 // import dotenv from 'dotenv';
 // dotenv.config();
 // This method is called when your extension is activated
@@ -45,73 +46,130 @@ export function activate(context: vscode.ExtensionContext) {
 		const directoryPath = path.dirname(filePath);
 		const fileType = determineProjectType(filePath);
 		vscode.window.showInformationMessage(`Project type: ${fileType}`);
-		// 创建一个 Webview 面板
-		const panel = vscode.window.createWebviewPanel(
-            'functionCallVisualizer', 
-            'Function Call Visualizer', 
-            vscode.ViewColumn.One, 
-            {
-                enableScripts: true
-            }
-        );
+		
 		let command = '';
-		let jsonObject = {};
 		let jsonPath = '';
         process.env.PYTHON_PATH = 'D:\\Download\\anaconda\\envs\\GPTuner_demo\\python.exe';
         const pythonInterpreter = process.env.PYTHON_PATH || 'python';
 		if (fileType === 'Python Project') {
-			command = `${pythonInterpreter} ${context.extensionPath}\\src\\scripts\\parse_python.py --directory ${filePath}`;
+			command = `${pythonInterpreter} ${context.extensionPath}\\src\\scripts\\parse_python_old.py --directory ${filePath}`;
 			// 在同级目录下创建 jsonPath
 			jsonPath = path.join(directoryPath, 'JsonRes','overall_call_graph.json');
 			// const jsonPath = path.join(context.extensionPath, 'src', 'python_json', 'overrall_call_grah.json');
 	    } 
 		else if (fileType === 'Java Project') {
-			command = `java -cp ${context.extensionPath}/src/scripts ParseJava ${filePath}`;
-			jsonPath = path.join(directoryPath, 'JsonRes','overrall_call_grah.json');
+			command = `${pythonInterpreter} ${context.extensionPath}\\src\\scripts\\parse_java.py --directory ${filePath}`;
+			jsonPath = path.join(directoryPath, 'JavaParseRes');
 			// const jsonPath = path.join(context.extensionPath, 'src', 'java_json', 'overrall_call_grah.json');
 		} 
 		else {
 			vscode.window.showErrorMessage('Unsupported file type');
 			return;
 		}
-        // const outputChannel = vscode.window.createOutputChannel('Analysis Output');
-		// exec(command, (error, stdout, stderr) => {
-		// 	if (error) {
-        //         outputChannel.appendLine(`Error: ${error.message}`);
-        //         outputChannel.appendLine(`stderr: ${stderr}`);
-        //         outputChannel.show();
-        //         // 显示错误信息提示框
-        //         vscode.window.showErrorMessage(`Error: ${error.message}. Check 'Analysis Output' for details.`);
-        //         // return;
-		// 	}
-		// 	if (stderr) {
-		// 		console.error(`stderr: ${stderr}`);
-		// 		// return;
-		// 	}
-		// 	console.log(`stdout: ${stdout}`);
-        //     outputChannel.appendLine(`stdout: ${stdout}`);
-        //     outputChannel.show();
-        //     console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
-        //     // 显示执行结果提示框
-        //     vscode.window.showInformationMessage(`Result: ${stdout}`);
-		// });
+        const outputChannel = vscode.window.createOutputChannel('Analysis Output');
+		exec(command, (error, stdout, stderr) => {
+			if (error) {
+                outputChannel.appendLine(`Error: ${error.message}`);
+                outputChannel.appendLine(`stderr: ${stderr}`);
+                outputChannel.show();
+                // 显示错误信息提示框
+                vscode.window.showErrorMessage(`Error: ${error.message}. Check 'Analysis Output' for details.`);
+                // return;
+			}
+			if (stderr) {
+				console.error(`stderr: ${stderr}`);
+				// return;
+			}
+			console.log(`stdout: ${stdout}`);
+            outputChannel.appendLine(`stdout: ${stdout}`);
+            outputChannel.show();
+            console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+            // 显示执行结果提示框
+            vscode.window.showInformationMessage(`Result: ${stdout}`);
+		});
 
-		if (fs.existsSync(jsonPath)) {
-			const jsonData = fs.readFileSync(jsonPath, 'utf8');
-			jsonObject = JSON.parse(jsonData);
-		}
 		
 		try {
-			// const result = child_process.execSync(command).toString();
-			panel.webview.html = getWebviewContent(jsonObject);
-				panel.webview.onDidReceiveMessage(message => {
-					switch (message.command) {
-						case 'alert':
-							vscode.window.showErrorMessage(message.text);
-							return;
-					}
-        		});
-			// panel.webview.html = getWebviewContent(result);
+            if (fileType === 'Python Project')
+            {
+                let jsonObject0 = {};
+                if (fs.existsSync(jsonPath)) {
+                    const jsonData = fs.readFileSync(jsonPath, 'utf8');
+                    jsonObject0 = JSON.parse(jsonData);
+                }
+                // 创建一个 Webview 面板
+                const panel = vscode.window.createWebviewPanel(
+                    'functionCallVisualizerPython', 
+                    'Function Call Visualizer', 
+                    vscode.ViewColumn.One, 
+                    {
+                        enableScripts: true
+                    }
+                );
+                // const result = child_process.execSync(command).toString();
+                panel.webview.html = getWebviewContent(jsonObject0);
+                    panel.webview.onDidReceiveMessage(message => {
+                        switch (message.command) {
+                            case 'alert':
+                                vscode.window.showErrorMessage(message.text);
+                                return;
+                        }
+                    });
+            }
+            if(fileType === 'Java Project')
+            {
+                let jsonObject1 = {};
+                let jsonObject2 = {};
+                if (fs.existsSync(jsonPath)) {
+                    const path1 = path.join(jsonPath, 'method_graph.json');
+                    const jsonData1 = fs.readFileSync(path1, 'utf8');
+                    if(fs.existsSync(path1))jsonObject1 = JSON.parse(jsonData1);
+                    const path2 = path.join(jsonPath, 'class_graph.json');
+                    const jsonData2 = fs.readFileSync(path2, 'utf8');
+                    if(fs.existsSync(path2))jsonObject2 = JSON.parse(jsonData2);
+                }
+                    
+                
+                // 创建两个 Webview 面板
+                const panel1 = vscode.window.createWebviewPanel(
+                    'functionCallVisualizerJava1', 
+                    'Method Call Visualizer', 
+                    vscode.ViewColumn.One, 
+                    {
+                        enableScripts: true
+                    }
+                );
+                // const result = child_process.execSync(command).toString();
+                
+                panel1.webview.html = getWebviewContent2(jsonObject1);
+                    panel1.webview.onDidReceiveMessage(message => {
+                        switch (message.command) {
+                            case 'alert':
+                                vscode.window.showErrorMessage(message.text);
+                                return;
+                        }
+                    });
+                const panel2 = vscode.window.createWebviewPanel(
+                    'functionCallVisualizerJava2', 
+                    'Class Call Visualizer', 
+                    vscode.ViewColumn.One, 
+                    {
+                        enableScripts: true
+                    }
+                );
+                // const result = child_process.execSync(command).toString();
+                
+                panel2.webview.html = getWebviewContent2(jsonObject2);
+                    panel2.webview.onDidReceiveMessage(message => {
+                        switch (message.command) {
+                            case 'alert':
+                                vscode.window.showErrorMessage(message.text);
+                                return;
+                        }
+                    });
+            }
+            
+			
 		} catch (error) {
 			vscode.window.showErrorMessage('Error generating function call graph');
 			console.error(error);
@@ -122,99 +180,270 @@ export function activate(context: vscode.ExtensionContext) {
 
 function getWebviewContent(data: any) {
     const jsonData = JSON.stringify(data);
-    return `
-<!DOCTYPE html>
+//     return `
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Function Call Hierarchy</title>
+//     <style>
+//         #cy {
+//             width: 100%;
+//             height: 600px;
+//             display: block;
+//             background-color: #ffffff; /* 设置背景为白色 */
+//         }
+//     </style>
+//     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"></script>
+//     <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+//     <script src="https://unpkg.com/cytoscape-dagre/cytoscape-dagre.js"></script>
+// </head>
+// <body>
+//     <div id="cy"></div>
+//     <script>
+//         const jsonData = ${jsonData};
+
+//         function parseJsonToElements(json, parentId = null) {
+//             let elements = [];
+//             for (const key in json) {
+//                 const id = key;
+//                 elements.push({
+//                     data: { id: id, label: key }
+//                 });
+//                 if (parentId) {
+//                     elements.push({
+//                         data: { source: parentId, target: id }
+//                     });
+//                 }
+//                 elements = elements.concat(parseJsonToElements(json[key], id));
+//             }
+//             return elements;
+//         }
+
+//         const elements = parseJsonToElements(jsonData);
+
+//         const cy = cytoscape({
+//             container: document.getElementById('cy'),
+//             elements: elements,
+//             style: [
+//                 {
+//                     selector: 'node',
+//                     style: {
+//                         'label': 'data(label)',
+//                         'text-valign': 'center',
+//                         'text-halign': 'center',
+//                         'background-color': '#999',
+//                         'color': '#333',
+//                         'font-size': '12px'
+//                     }
+//                 },
+//                 {
+//                     selector: 'edge',
+//                     style: {
+//                         'width': 2,
+//                         'line-color': '#ccc',
+//                         'target-arrow-color': '#ccc',
+//                         'target-arrow-shape': 'triangle'
+//                     }
+//                 }
+//             ],
+//             layout: {
+//                 name: 'dagre', // 使用Dagre布局实现层次分明的效果
+//                 rankDir: 'TB', // 从上到下的布局方式 (也可以选择 'LR' 从左到右)
+//                 nodeSep: 50, // 节点之间的垂直间距
+//                 edgeSep: 10, // 边之间的垂直间距
+//                 rankSep: 100, // 每一层之间的间距
+//                 align: 'DR', // 对齐方式 (选项 'UL', 'UR', 'DL', 'DR')
+//                 ranker: 'network-simplex', // 层级分配算法，可以选 'longest-path' 或 'tight-tree'
+//                 minLen: function(edge) { return 2; }, // 最小边长
+//                 padding: 10, // 布局的内边距
+//                 spacingFactor: 1.5, // 控制整体布局的扩展度
+//             }
+//         });
+//     </script>
+// </body>
+// </html>
+
+// `;
+//     return `<!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>JSON Viewer</title>
+//     <style>
+//         .node {
+//             margin-left: 20px;
+//             cursor: pointer;
+//             color: blue;
+//         }
+//         .node.collapsed > .children {
+//             display: none;
+//         }
+//     </style>
+// </head>
+// <body>
+
+// <div id="jsonViewer"></div>
+
+// <script>
+//     const data = ${jsonData};
+
+//     function createNode(key, value) {
+//         const nodeElement = document.createElement('div');
+//         nodeElement.className = 'node';
+//         nodeElement.textContent = key;
+
+//         if (typeof value === 'object' && value !== null) {
+//             const childrenContainer = document.createElement('div');
+//             childrenContainer.className = 'children';
+
+//             for (const childKey in value) {
+//                 childrenContainer.appendChild(createNode(childKey, value[childKey]));
+//             }
+
+//             nodeElement.appendChild(childrenContainer);
+
+//             nodeElement.addEventListener('click', () => {
+//                 nodeElement.classList.toggle('collapsed');
+//             });
+//         }
+
+//         return nodeElement;
+//     }
+
+//     const viewer = document.getElementById('jsonViewer');
+//     for (const key in data) {
+//         viewer.appendChild(createNode(key, data[key]));
+//     }
+// </script>
+
+// </body>
+// </html>
+// `;
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Function Call Tree</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>JSON Viewer</title>
     <style>
         body {
             background-color: white;
-            overflow: hidden;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: gray;
         }
-        .node circle {
-            fill: #999;
-            stroke: steelblue;
-            stroke-width: 3px;
+        .node {
+            margin-left: 20px;
+            cursor: pointer;
         }
-        .node text {
-            font: 14px sans-serif;
-        }
-        .link {
-            fill: none;
-            stroke: #555;
-            stroke-opacity: 0.4;
-            stroke-width: 1.5px;
+        .node.collapsed > .children {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div id="tree-container" style="width: 100%; height: 100vh;"></div>
+
+<div id="jsonViewer"></div>
+
+<script>
+    const data = ${jsonData};
+
+    function createNode(key, value) {
+        const nodeElement = document.createElement('div');
+        nodeElement.className = 'node';
+        nodeElement.textContent = key;
+
+        if (typeof value === 'object' && value !== null) {
+            const childrenContainer = document.createElement('div');
+            childrenContainer.className = 'children';
+            childrenContainer.style.marginLeft = '20px';
+
+            for (const childKey in value) {
+                childrenContainer.appendChild(createNode(childKey, value[childKey]));
+            }
+
+            nodeElement.appendChild(childrenContainer);
+            nodeElement.classList.add('collapsed');
+
+            nodeElement.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nodeElement.classList.toggle('collapsed');
+            });
+        }
+
+        return nodeElement;
+    }
+
+    const viewer = document.getElementById('jsonViewer');
+    for (const key in data) {
+        viewer.appendChild(createNode(key, data[key]));
+    }
+</script>
+
+</body>
+</html>
+`;
+}
+function getWebviewContent2(data: any){
+    const jsonData = JSON.stringify(data);
+    return `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple JSON Hierarchy Visualization</title>
+    <style>
+        .nested {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
     <script>
         const data = ${jsonData};
 
-        function transformData(data) {
-            const transformed = { name: "root", children: [] };
-            for (const [key, value] of Object.entries(data)) {
-                const node = { name: key, children: [] };
-                for (const [func, calls] of Object.entries(value)) {
-                    const funcNode = { name: func, children: calls.map(call => ({ name: call, children: [] })) };
-                    node.children.push(funcNode);
+        function renderJSON(data, container) {
+            Object.keys(data).forEach(key => {
+                const element = document.createElement('div');
+                element.className = 'nested';
+                element.textContent = key;
+                
+                const childrenContainer = document.createElement('div');
+                childrenContainer.className = 'hidden';
+                
+                element.addEventListener('click', () => {
+                    childrenContainer.classList.toggle('hidden');
+                });
+                
+                container.appendChild(element);
+                container.appendChild(childrenContainer);
+                
+                if (Array.isArray(data[key])) {
+                    data[key].forEach(item => {
+                        const childElement = document.createElement('div');
+                        childElement.className = 'nested';
+                        childElement.textContent = item;
+                        childrenContainer.appendChild(childElement);
+                    });
+                } else {
+                    renderJSON(data[key], childrenContainer);
                 }
-                transformed.children.push(node);
-            }
-            return transformed;
+            });
         }
 
-        const transformedData = transformData(data);
-
-        const margin = { top: 20, right: 90, bottom: 30, left: 90 },
-            width = 960 - margin.left - margin.right,
-            height = 800 - margin.top - margin.bottom;
-
-        const svg = d3.select("#tree-container").append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%")
-            .call(d3.zoom().on("zoom", function (event) {
-                svg.attr("transform", event.transform);
-            }))
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-        const root = d3.hierarchy(transformedData);
-
-        const treeLayout = d3.tree().nodeSize([20, 300]);
-        treeLayout(root);
-
-        const link = svg.selectAll(".link")
-            .data(root.links())
-            .enter().append("path")
-            .attr("class", "link")
-            .attr("d", d3.linkHorizontal()
-                .x(d => d.y)
-                .y(d => d.x));
-
-        const node = svg.selectAll(".node")
-            .data(root.descendants())
-            .enter().append("g")
-            .attr("class", "node")
-            .attr("transform", d => "translate(" + d.y + "," + d.x + ")");
-
-        node.append("circle")
-            .attr("r", 5);
-
-        node.append("text")
-            .attr("dy", ".35em")
-            .attr("x", d => d.children ? -13 : 13)
-            .style("text-anchor", d => d.children ? "end" : "start")
-            .text(d => d.data.name);
+        renderJSON(data.method_calls, document.getElementById('container'));
     </script>
 </body>
 </html>
-
 `;
 }
 
@@ -249,3 +478,7 @@ function determineProjectType(projectPath: string) {
 
 // This method is called when your extension is deactivated
 export function deactivate() {}
+function translate($: any, arg1: { d: any; "": any; }, $1: any, arg3: { d: any; "": any; }) {
+    throw new Error('Function not implemented.');
+}
+

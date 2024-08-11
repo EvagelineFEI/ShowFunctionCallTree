@@ -1,405 +1,284 @@
 {
-    "load_mat": {
-        "load_mat": [
-            "len",
-            "array",
-            "append",
-            "readlines",
-            "map",
-            "range",
-            "open",
-            "strip",
-            "list",
-            "split"
-        ],
-        "len": [],
-        "array": [],
-        "append": [],
-        "readlines": [],
-        "map": [],
-        "range": [],
-        "open": [],
-        "strip": [],
-        "list": [],
-        "split": []
-    },
     "get_alpha": {
-        "get_alpha": [
-            "array",
-            "append",
-            "readlines",
-            "float",
-            "open",
-            "strip",
-            "split"
-        ],
-        "array": [],
-        "append": [],
-        "readlines": [],
-        "float": [],
-        "open": [],
-        "strip": [],
-        "split": []
-    },
-    "IntervalTypeFuzzy": {
-        "IntervalTypeFuzzy": []
-    },
-    "DoubleOptimizer": {
-        "DoubleOptimizer": []
-    },
-    "load_mat_general": {
-        "load_mat_general": [
-            "len",
-            "array",
-            "append",
-            "readlines",
-            "map",
-            "range",
-            "open",
-            "strip",
-            "getcwd",
-            "list",
-            "split"
-        ],
-        "len": [],
-        "array": [],
-        "append": [],
-        "readlines": [],
-        "map": [],
-        "range": [],
-        "open": [],
-        "strip": [],
-        "getcwd": [],
-        "list": [],
-        "split": []
-    },
-    "SingleOptimizer": {
-        "SingleOptimizer": []
+        "get_alpha": {
+            "array": {},
+            "split": {},
+            "strip": {},
+            "readlines": {}
+        }
     },
     "draw_single": {
-        "draw_single": [
-            "tight_layout",
-            "read",
-            "type",
-            "grid",
-            "savefig",
-            "subplots",
-            "scatter",
-            "set_scientific",
-            "loads",
-            "set_title",
-            "set_major_formatter",
-            "set_xlabel",
-            "tick_params",
-            "range",
-            "open",
-            "show",
-            "print",
-            "len",
-            "ScalarFormatter"
-        ],
-        "tight_layout": [],
-        "read": [],
-        "type": [],
-        "grid": [],
-        "savefig": [],
-        "subplots": [],
-        "scatter": [],
-        "set_scientific": [],
-        "loads": [],
-        "set_title": [],
-        "set_major_formatter": [],
-        "set_xlabel": [],
-        "tick_params": [],
-        "range": [],
-        "open": [],
-        "show": [],
-        "print": [],
-        "len": [],
-        "ScalarFormatter": []
-    },
-    "count_r": {
-        "count_r": [
-            "array",
-            "count_hes",
-            "count_fuzz",
-            "range",
-            "multiply",
-            "final_count",
-            "abs",
-            "print"
-        ],
-        "array": [],
-        "count_hes": [
-            "range",
-            "min",
-            "array",
-            "max"
-        ],
-        "range": [],
-        "min": [],
-        "max": [],
-        "count_fuzz": [
-            "range",
-            "min",
-            "array",
-            "max"
-        ],
-        "multiply": [],
-        "final_count": [
-            "count_vgij",
-            "append",
-            "multi_add",
-            "zeros",
-            "range",
-            "count_vig",
-            "count_alle",
-            "count_similar",
-            "count_mcov",
-            "count_var",
-            "count_r",
-            "len"
-        ],
-        "count_vgij": [
-            "array",
-            "append",
-            "zeros",
-            "range",
-            "count_var2t",
-            "sum"
-        ],
-        "append": [],
-        "zeros": [],
-        "count_var2t": [
-            "range"
-        ],
-        "sum": [],
-        "multi_add": [
-            "sum",
-            "inside_proc"
-        ],
-        "inside_proc": [
-            "abs"
-        ],
-        "abs": [],
-        "count_vig": [
-            "array",
-            "range",
-            "sum",
-            "abs"
-        ],
-        "count_alle": [
-            "append",
-            "count_vig",
-            "range",
-            "multiply",
-            "countP"
-        ],
-        "countP": [
-            "array",
-            "range",
-            "sum",
-            "append"
-        ],
-        "count_similar": [
-            "sqrt"
-        ],
-        "sqrt": [],
-        "count_mcov": [],
-        "count_var": [
-            "range"
-        ],
-        "len": [],
-        "print": []
+        "draw_single": {
+            "read": {},
+            "set_major_formatter": {},
+            "set_scientific": {},
+            "scatter": {},
+            "subplots": {},
+            "tight_layout": {},
+            "savefig": {},
+            "tick_params": {},
+            "set_xlabel": {},
+            "set_title": {},
+            "show": {},
+            "ScalarFormatter": {},
+            "grid": {},
+            "loads": {}
+        }
     },
     "evolution": {
-        "evolution": [
-            "min",
-            "list",
-            "random",
-            "append",
-            "wake_s",
-            "pop_init",
-            "final_count",
-            "sum",
-            "remove",
-            "selectBynasg2",
-            "max",
-            "zip",
-            "uniform",
-            "copy",
-            "index",
-            "select_newpop",
-            "range",
-            "print",
-            "sample",
-            "addto1",
-            "wakeup",
-            "len"
-        ],
-        "min": [],
-        "list": [],
-        "random": [],
-        "append": [],
-        "wake_s": [
-            "range",
-            "list",
-            "remove",
-            "sample"
-        ],
-        "range": [],
-        "remove": [],
-        "sample": [],
-        "pop_init": [
-            "range",
-            "uniform",
-            "addto1",
-            "append"
-        ],
-        "uniform": [],
-        "addto1": [
-            "range",
-            "sum",
-            "len"
-        ],
-        "sum": [],
-        "len": [],
-        "final_count": [
-            "count_vgij",
-            "append",
-            "multi_add",
-            "zeros",
-            "range",
-            "count_vig",
-            "count_alle",
-            "count_similar",
-            "count_mcov",
-            "count_var",
-            "count_r",
-            "len"
-        ],
-        "count_vgij": [
-            "array",
-            "append",
-            "zeros",
-            "range",
-            "count_var2t",
-            "sum"
-        ],
-        "array": [],
-        "zeros": [],
-        "count_var2t": [
-            "range"
-        ],
-        "multi_add": [
-            "sum",
-            "inside_proc"
-        ],
-        "inside_proc": [
-            "abs"
-        ],
-        "abs": [],
-        "count_vig": [
-            "array",
-            "range",
-            "sum",
-            "abs"
-        ],
-        "count_alle": [
-            "append",
-            "count_vig",
-            "range",
-            "multiply",
-            "countP"
-        ],
-        "multiply": [],
-        "countP": [
-            "array",
-            "range",
-            "sum",
-            "append"
-        ],
-        "count_similar": [
-            "sqrt"
-        ],
-        "sqrt": [],
-        "count_mcov": [],
-        "count_var": [
-            "range"
-        ],
-        "count_r": [
-            "array",
-            "count_hes",
-            "count_fuzz",
-            "range",
-            "multiply",
-            "final_count",
-            "abs",
-            "print"
-        ],
-        "count_hes": [
-            "range",
-            "min",
-            "array",
-            "max"
-        ],
-        "max": [],
-        "count_fuzz": [
-            "range",
-            "min",
-            "array",
-            "max"
-        ],
-        "print": [],
-        "selectBynasg2": [
-            "array",
-            "append",
-            "range",
-            "dominate",
-            "index",
-            "len"
-        ],
-        "dominate": [
-            "copy",
-            "final_count"
-        ],
-        "copy": [],
-        "index": [],
-        "zip": [],
-        "select_newpop": [
-            "append",
-            "count_congestion",
-            "range",
-            "final_count",
-            "copy",
-            "len"
-        ],
-        "count_congestion": [
-            "append",
-            "zeros",
-            "range",
-            "final_count",
-            "copy",
-            "zip",
-            "list",
-            "sorted",
-            "len"
-        ],
-        "sorted": [],
-        "wakeup": [
-            "range",
-            "remove",
-            "sample",
-            "list",
-            "len"
-        ]
+        "evolution": {
+            "remove": {},
+            "index": {},
+            "addto1": {},
+            "uniform": {},
+            "selectBynasg2": {
+                "dominate": {
+                    "final_count": {
+                        "count_similar": {
+                            "sqrt": {}
+                        },
+                        "count_alle": {
+                            "countP": {
+                                "array": {}
+                            },
+                            "count_vig": {
+                                "array": {}
+                            },
+                            "multiply": {}
+                        },
+                        "count_mcov": {},
+                        "count_r": {
+                            "array": {},
+                            "multiply": {},
+                            "count_hes": {
+                                "array": {}
+                            },
+                            "count_fuzz": {
+                                "array": {}
+                            },
+                            "final_count_SameNameMethodFromOtherClass": {}
+                        },
+                        "count_vig": {
+                            "array": {}
+                        },
+                        "count_vgij": {
+                            "count_var2t": {},
+                            "array": {}
+                        },
+                        "multi_add": {
+                            "inside_proc": {}
+                        },
+                        "count_var": {}
+                    }
+                },
+                "array": {},
+                "index": {}
+            },
+            "wakeup": {
+                "remove": {}
+            },
+            "wake_s": {
+                "remove": {}
+            },
+            "final_count": {
+                "count_similar": {
+                    "sqrt": {}
+                },
+                "count_alle": {
+                    "countP": {
+                        "array": {}
+                    },
+                    "count_vig": {
+                        "array": {}
+                    },
+                    "multiply": {}
+                },
+                "count_mcov": {},
+                "count_r": {
+                    "array": {},
+                    "multiply": {},
+                    "count_hes": {
+                        "array": {}
+                    },
+                    "count_fuzz": {
+                        "array": {}
+                    },
+                    "final_count_SameNameMethodFromOtherClass": {}
+                },
+                "count_vig": {
+                    "array": {}
+                },
+                "count_vgij": {
+                    "count_var2t": {},
+                    "array": {}
+                },
+                "multi_add": {
+                    "inside_proc": {}
+                },
+                "count_var": {}
+            },
+            "select_newpop": {
+                "count_congestion": {
+                    "final_count": {
+                        "count_similar": {
+                            "sqrt": {}
+                        },
+                        "count_alle": {
+                            "countP": {
+                                "array": {}
+                            },
+                            "count_vig": {
+                                "array": {}
+                            },
+                            "multiply": {}
+                        },
+                        "count_mcov": {},
+                        "count_r": {
+                            "array": {},
+                            "multiply": {},
+                            "count_hes": {
+                                "array": {}
+                            },
+                            "count_fuzz": {
+                                "array": {}
+                            },
+                            "final_count_SameNameMethodFromOtherClass": {}
+                        },
+                        "count_vig": {
+                            "array": {}
+                        },
+                        "count_vgij": {
+                            "count_var2t": {},
+                            "array": {}
+                        },
+                        "multi_add": {
+                            "inside_proc": {}
+                        },
+                        "count_var": {}
+                    }
+                },
+                "final_count": {
+                    "count_similar": {
+                        "sqrt": {}
+                    },
+                    "count_alle": {
+                        "countP": {
+                            "array": {}
+                        },
+                        "count_vig": {
+                            "array": {}
+                        },
+                        "multiply": {}
+                    },
+                    "count_mcov": {},
+                    "count_r": {
+                        "array": {},
+                        "multiply": {},
+                        "count_hes": {
+                            "array": {}
+                        },
+                        "count_fuzz": {
+                            "array": {}
+                        },
+                        "final_count_SameNameMethodFromOtherClass": {}
+                    },
+                    "count_vig": {
+                        "array": {}
+                    },
+                    "count_vgij": {
+                        "count_var2t": {},
+                        "array": {}
+                    },
+                    "multi_add": {
+                        "inside_proc": {}
+                    },
+                    "count_var": {}
+                }
+            },
+            "pop_init": {
+                "addto1": {},
+                "uniform": {}
+            }
+        }
+    },
+    "IntervalTypeFuzzy": {
+        "IntervalTypeFuzzy": {}
+    },
+    "count_r": {
+        "count_r": {
+            "array": {},
+            "multiply": {},
+            "count_hes": {
+                "array": {}
+            },
+            "count_fuzz": {
+                "array": {}
+            },
+            "final_count": {
+                "count_similar": {
+                    "sqrt": {}
+                },
+                "count_alle": {
+                    "countP": {
+                        "array": {}
+                    },
+                    "count_vig": {
+                        "array": {}
+                    },
+                    "multiply": {}
+                },
+                "count_mcov": {},
+                "count_r": {
+                    "array": {},
+                    "multiply": {},
+                    "count_hes": {
+                        "array": {}
+                    },
+                    "count_fuzz": {
+                        "array": {}
+                    },
+                    "final_count_SameNameMethodFromOtherClass": {}
+                },
+                "count_vig": {
+                    "array": {}
+                },
+                "count_vgij": {
+                    "count_var2t": {},
+                    "array": {}
+                },
+                "multi_add": {
+                    "inside_proc": {}
+                },
+                "count_var": {}
+            }
+        }
+    },
+    "load_mat_general": {
+        "load_mat_general": {
+            "array": {},
+            "readlines": {},
+            "split": {},
+            "strip": {},
+            "getcwd": {}
+        }
+    },
+    "load_mat": {
+        "load_mat": {
+            "array": {},
+            "split": {},
+            "strip": {},
+            "readlines": {}
+        }
+    },
+    "DoubleOptimizer": {
+        "DoubleOptimizer": {}
     },
     "store_result": {
-        "store_result": [
-            "dump",
-            "open"
-        ],
-        "dump": [],
-        "open": []
+        "store_result": {
+            "dump": {}
+        }
+    },
+    "SingleOptimizer": {
+        "SingleOptimizer": {}
     }
 }
